@@ -179,3 +179,9 @@ Apply inherited sequence: `CLOSED_VERIFIED → HANDOFF → ROADMAP/JOURNAL → S
 - Opt-in audible link: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?soundDemo=1 ; WAV: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/audio/medeus_ascent_deep_v2.wav
 - [MEDEUS_GREETING_SOUND_DESIGN_V2_ASCENT](docs/canon/MEDEUS_GREETING_SOUND_DESIGN_V2_ASCENT.md) is the CURRENT AUDIO SPEC. Keep ordinary scene visually unchanged and **do not autoplay candidate** before explicit signoff.
 - `SOUND_V2_ASSET_AND_PREVIEW=COMMITTED`; `SOURCE_SYNC=PASS`; `USER_SONIC_APPROVAL=PENDING`; `DEFAULT_WEBSITE_AUDIO_ENABLED=FALSE`.
+
+## 2026-10-12 — USER PROVISIONAL SOUND REVIEW
+- The user reviewed the newly synthesized MEDEUS ASCENT V2 sound and said: «для начала сойдет но это не окончательный».
+- Exact adjudication: `V2_AS_WORKING_REFERENCE=PROVISIONAL_ACCEPTED`; `FINAL_AUDIO_SIGNOFF=false`; `FINAL_SOUND_DESIGN=PENDING`.
+- The V2 ascending-only melodic direction and desire for genuine low-frequency depth remain design requirements, but timbre, harmonic sophistication, spatial depth and final sound identity are open to refinement. Do not mistake «сойдет» for full approval.
+- Do not activate the provisional cue as a default/automatic welcome sound solely on this review. If a demo is used, label it as provisional and retain manual or first-gesture playback restrictions.
