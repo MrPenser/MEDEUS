@@ -43,3 +43,15 @@ User explicitly rejected the humanoid/druid face ("пока откажемся �
 - Default version: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/
 - Reversible classic compare: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?surface=classic
 - QA verdict: `SHADER_COMPILE=PASS`; `TEN_STATES_PRESERVED=PASS`; `BUILD_BUN_VITE=PASS`; `UNIT_TESTS=6_PASS`; `MOBILE_GPU_PERFORMANCE=NOT_TESTED`; `USER_VISUAL_APPROVAL=PENDING`.
+
+
+## 2026-10-12 — Liquid v1.1: fluid stillness + cursor attraction
+**Real user QA feedback on v1:** mouse-click response was good; idle water appeared like cheap rocking 2-D wallpaper; **hover without clicking did nothing**, although the membrane should be slightly drawn toward and lag behind the cursor.
+
+**V1.1 user-requested correction now in website source:**
+- `src/lib/medeus/orb-field.ts` commit `a8990df7fd54262856b5aa8f41eaff38e5825421`: replace axis-aligned rocking sines with *asymmetric, domain-advected circular gyres*; proper 3-D spherical-cap optical normal for specular/reflections, two soft drifting highlights, local hover-raised liquid height/UV lens and tiny silhouette tug toward the cursor. This is an optical shader approximation, not full Navier-Stokes physical simulation.
+- `src/components/medeus/MedeusStage.tsx` commit `048b68ec734885f41ff2a49b1071e1dac81aac02`: record passive pointer motion within 1.12 orb radii, map to normalized orb coordinates, move membrane position toward target with exponential inertia **145ms**, release over **230ms**, no click required. Touchscreen pointer movements are excluded from hover to avoid native keyboard/touch interference. On pointer leave, strength decays smoothly; `prefers-reduced-motion` reduces hover amplitude.
+- **Click impact preserved** with same expanding wave equation/envelope; original locked bitmap never rewritten. Classical `?surface=classic` ignores the added fluid/hover uniforms, leaving the original optical shader path.
+- Strong code custody gate: the **entire original `sampleState(...)` function (all 10 inner states; 2,656 characters) was compared byte-for-byte against earlier commit `0a1675a1...` and is EXACTLY UNCHANGED**. Vertex shader is unchanged as well.
+- CI: GitHub Actions `38293138422` `shader=success` (GLSL ES100), `site=success` (Bun Vite build, existing tests); complete checked source `048b68ec734885f41ff2a49b1071e1dac81aac02`. Lovable `get_project` source sync reports matching commit and `ready`.
+- User-facing trial/compare links remain unchanged. `USER_VISUAL_QA_V1=REJECTED_IDLE_AND_HOVER`; `V1_1_SHADER_SOURCE_QA=PASS`; `V1_1_USER_BROWSER_VISUAL_QA=PENDING`; `FINAL_VISUAL_LOCK=NOT_GRANTED`.
