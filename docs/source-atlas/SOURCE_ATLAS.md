@@ -53,3 +53,11 @@
 - Private code `src/components/medeus/MedeusStage.tsx` — enlarges orb WebGL box, translates mic click to orb-internal photon source.
 - `src/lib/medeus/orb-field.ts` — motion state shader unchanged (blob `04fbf8a4432d55cdb964096b42949bb24a248643`).
 - Lovable preview source readback `6c92b87ca0dd69e8a1697e3e5e339871921b9f20`; live screenshot acceptance pending.
+
+## Mobile responsive website source (2026-10-12)
+- `docs/decisions/MEDEUS_MOBILE_RESPONSIVE_PORT_2026-10-12.md` — decision, breakpoints, smoke geometry, original-source custody and acceptance.
+- Private source `MrPenser/medeus-master-asset/src/lib/medeus/mobile-field.ts` — full-bleed unblurred portrait/landscape cosmic field from approved presentation pixels only.
+- Private source `src/components/medeus/MedeusStage.tsx` — adaptive orb/mic coordinates, mobile native textarea and accurate photonic origin, desktop kept untouched.
+- Private source `src/lib/medeus/speech.ts` — native speech availability gate; mic fallback to keyboard when unsupported.
+- Private source `src/routes/__root.tsx`, `src/styles.css` — mobile viewport/safe area and overscroll.
+- Lovable synced code checkpoint `e4cb31a05e3f3238dce4f143035168a825f890cc`. Phone device signoff pending.
