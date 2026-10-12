@@ -1,0 +1,43 @@
+# MEDEUS — ROADMAP
+**Baseline date:** 2026-10-12 · **Status:** `PLANNED / NOT_PRODUCTION / USER_MOTION_SIGNOFF_PENDING`
+**Identity:** mobile-first, single-screen, voice/text interface. The approved master graphic is frozen. MEDEUS is **not** a new ASTRADELIA core component.
+
+Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXACT VISUAL LOCK](docs/canon/MEDEUS_VISUAL_MASTER_LOCK_V1.md) → [10 CORE STATES](docs/canon/MEDEUS_CORE_STATE_MODEL_V1.md) → [RECONCILIATION](docs/decisions/MEDEUS_CANON_RECONCILIATION_2026-10-12.md) → [ASTRADELIA boundary](docs/architecture/MEDEUS_PRODUCT_BOUNDARY_V1.md) → [HANDOFF](HANDOFF_STATE.md).
+
+## No false passes
+- `VISUAL_MASTER_LOCKED` is **not** `ASSET_IN_GITHUB` or `ANIMATION_ACCEPTED`.
+- `TEN_STATES_DESCRIBED` is **not** `TEN_STATES_VERIFIED`. v4/v5 rejected as static/single-spin; v6 still candidate.
+- `PREVIEW_RENDERED` is **not** `LIVE_DEPLOYMENT` or `MOBILE_INTERACTION_PASS`.
+- `SIMULATED_RESPONSE` is **not** `ASTRADELIA_VERIFIED_FORECAST`; `NO_ACCOUNTS` is not `NO_PAYMENT_SECURITY`.
+- `DOCUMENT_WRITTEN` is not `STAGE_COMPLETE` until GitHub readback, custody, testing and relevant inheritance sync complete.
+
+## Ordered delivery stages
+
+| Stage | Target | Required evidence / acceptance | Initial status |
+|---|---|---|---|
+| **M0 — Canon + provenance** | Versioned roadmap, requirements, discrepancy log, handoff; freeze master reference hash | GitHub file readback; check all user constraints; SHA record | `IN_PROGRESS` |
+| **M1 — Asset custody and exact design** | Import **exact approved** PNG as a managed binary; no regeneration | SHA-256 on source vs repository + delivery; design-safe mobile crop; resolve baked-English localization/embedded-mic conflict by approved plan | `BLOCKED_BY_ASSET_AND_VISUAL_TEXT_DECISION` |
+| **M2 — Real core motion** | Implement all 10 distinct non-rotational states plus real transitions | 10 short real-device clips; actual state triggers; reviewer sees differences; touch origin in four quadrants; mobile fps/memory; explicit **user acceptance** | `REQUIRED_NOT_ACCEPTED` |
+| **M3 — Photon materialization** | Local touch emits blurred smoke -> sharpens -> glyphs -> words -> complete sentence | Variable touch origin; blur monotonic toward target; no center fallback for touch; RU/EN/TR and non-Latin rendering; timing tests | `REQUIRED_UNVERIFIED` |
+| **M4 — Input, accessibility, i18n** | Voice capture + frameless text; language of request; localization by locale/geo hint | Browser speech tests with permission denial; ru/en/tr+ script/direction QA; no visible form/buttons; reduced-motion and keyboard/screen-reader QA | `REQUIRED_UNVERIFIED` |
+| **M5 — Verified forecast integration (shadow)** | Safe read-only interface with ASTRADELIA or scoped non-ASTRADELIA baseline | Validation contract and provenance, forecast cutoff, proper scoring / uncertainty, independ. verifier, forward frozen ledger; shadow before paid claims | `DEPENDENCY_GATED_NOT_CONNECTED` |
+| **M6 — Anonymous external checkout** | Hosted provider redirect, pay-per-answer (~$1 hypothesis), no MEDEUS signup | Eligible merchant/jurisdiction check; webhook verification + idempotency + signed anon entitlement; refunds/tax/consent/abuse limits; unit economics | `NOT_CONNECTED` |
+| **M7 — HTTPS mobile pilot** | Real deployed one-screen site with typed/voice mode and accessibility | Live domain link; test on physical mobile/portrait/landscape; real network/permission issues; monitoring, performance and recovery | `NOT_DEPLOYED` |
+| **M8 — Evidence-backed public launch** | Stable truthful forecasts, monetization and documentation | Independent end-to-end readback, user signoff, legal/privacy checks, economic test, no unsupported accuracy claims | `NOT_AUTHORIZED` |
+
+### First next execution
+1. Resolve **M1 visual text localization / source asset custody** before declaring layout final.
+2. Replace common spinner with genuinely different state-field mechanics; **demonstrate all 10** on mobile side by side and collect user verdict.
+3. Iterate M3 photon mist from tap coordinate with performance measurements.
+4. Bring up HTTPS preview for *real* interaction before claiming user has an interactive demo.
+
+## Research / economics
+- Indicative **$1 forecast**, not a fixed commercial obligation. Run end-to-end unit cost and lawful payment availability experiments. Do not equate model API price with verified per-answer cost.
+- Preserve model/evidence snapshot IDs, search ledger, frozen trial family/evaluation window/adaptation policy for claims. `BACKTEST_EDGE != VERIFIED_FORWARD_EDGE`.
+- External Stripe/Visa-capable provider may require billing details; MEDEUS does not collect card details or require account.
+
+## Controls & change authority
+- **Approved visual** and **explicit UX decisions** are locked; any change requires user signoff.
+- **Animations v1-v6** are samples/evidence, not accepted master behavior. No automatic promotion.
+- MEDEUS may reuse permitted public ASTRADELIA capabilities, but must not alter `MrPenser/genius-ai` gates, architecture or history.
+- Inheritance/doc closure follows `CLOSED_VERIFIED → HANDOFF → ROADMAP/JOURNAL → SOURCE_ATLAS → READBACK → COMPLETE`. Not yet completed; all unverified stages remain OPEN.
