@@ -108,3 +108,12 @@ Apply inherited sequence: `CLOSED_VERIFIED → HANDOFF → ROADMAP/JOURNAL → S
 - Code commits: `e0a5939f7023b611a06b9c661840db08c9432c31` (sharp panorama), `4b5e3fd4787a6f9f284273c87bc9a6c2cea5cd89` (website composition), `70cbd2a2c0d6636217797fed92a8ca4c45a808fc` (remove blurred styles).
 - `SHARP_FULL_BLEED_CODE_WRITTEN=true`; `LATEST_GITHUB_COMMIT=70cbd2a2c0d6636217797fed92a8ca4c45a808fc`. Lovable preview sync and user rendering **must be separately checked** before `VISUAL_WIDTH_PASS`. `MOBILE=DEFERRED`.
 - Preserve accepted core-state shaders (`orb-field.ts`) and existing photon timing/glyph code unchanged during this background repair.
+
+## 2026-10-12 — Latest approved desktop display changes (source synced, visual signoff pending)
+- User authorizes removal of bottom-left and bottom-right English microcopy, microphone placement BELOW materialized text, and faster photonic appearance.
+- Normative six-point contract: [MEDEUS_DESKTOP_LAYOUT_REVISION_2026-10-12](docs/decisions/MEDEUS_DESKTOP_LAYOUT_REVISION_2026-10-12.md).
+- Exact source master SHA-256 unchanged: `52244e15720d0dd40faa04914a44f8051a6466c166973b2609ea5d58f0e1de88`. A runtime-only original-pixel derivative suppresses baked texts/old microphone and moves its original artwork under dynamic answer, without changing source file. This explicitly resolves the previously OPEN visual-text preservation conflict for these user-approved regions only. Global multilingual translation of other baked-in English text remains NOT COMPLETE.
+- Microphone image center original-coordinate `(723,973)`; response/input baseline `y=823`; click on relocated mic also initiates input.
+- Emission `1400ms` (was `3500ms`); materialization `3900ms` (was `8700ms`) with per-letter reveal.
+- `TEN_STATE_MOTION=PROVISIONALLY_ACCEPTED_AND_FROZEN`; `SHARP_FULL_WIDTH_COSMIC_FIELD=UNCHANGED`; `DESKTOP_ONLY_CURRENT`.
+- Verified Lovable source-sync checkpoint `235fed4190b9558f43eeab302a7de492e421517e`; `SOURCE_IMPLEMENTED=true`; `USER_VISUAL_SIGNOFF=PENDING`; `FULL_STAGE_COMPLETION=FALSE`.
