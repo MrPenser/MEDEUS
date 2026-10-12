@@ -131,3 +131,11 @@ Apply inherited sequence: `CLOSED_VERIFIED → HANDOFF → ROADMAP/JOURNAL → S
 - Refined orbit cleanup commit `a358bb34397eeb9505998abc663ff638a7e45161` **confirmed synchronized** in Lovable preview (`ready=true`); source mask only targets brighter thin external guide lines, avoiding previous smearing. May leave faint remnant guides: visual acceptance PENDING.
 - Mic activation now stores source coordinate inside visual orb, never mic position. `orbScale=1.23`; all 10 original state shaders remain frozen (blob `04fbf8a4432d55cdb964096b42949bb24a248643`).
 - Source and evidence in [ORB_SOURCE_AND_SCALE](docs/decisions/MEDEUS_ORB_SOURCE_AND_SCALE_2026-10-12.md). `LIVE_VISUAL_APPROVAL=PENDING`; `MOBILE_WORK=DEFERRED`.
+
+## ACTIVE: Responsive mobile website port — 2026-10-12
+- **Latest instruction supersedes old `MOBILE_DEFERRED`**: user specifically requests mobile adaptation. Not a native mobile app; same MEDEUS browser site, mobile-specific layout with original desktop unaffected.
+- Private code repo `MrPenser/medeus-master-asset`; GitHub source commits: `3fa5457` mobile full-bleed source-derived cosmic painter, `de63c54` responsive stage and soft-keyboard/IME, `214a307` mobile safe viewport, `64c90f4` overscroll, `b0859a5` speech support check, `e4cb31a` mic fallback. Lovable last synced: `e4cb31a05e3f3238dce4f143035168a825f890cc` with `ready=true`.
+- Mobile portrait 390x844: orb center ~(195,333), max diameter ~369px, reply baseline ~641, relocated mic center ~758. Full-bleed scene, no form boxes; tap sphere for native text, mic for voice where browser supports it. All photon origin coordinates remain orb-only.
+- Approved-for-now ten-state shader **untouched** blob `04fbf8a4432d55cdb964096b42949bb24a248643`; source master PNG still hash `52244e15720d0dd40faa04914a44f8051a6466c166973b2609ea5d58f0e1de88`.
+- Full contract: [MEDEUS_MOBILE_RESPONSIVE_PORT_2026-10-12](docs/decisions/MEDEUS_MOBILE_RESPONSIVE_PORT_2026-10-12.md).
+- `MOBILE_SOURCE_AND_SYNC=PASS`; `MOBILE_PHYSICAL_DEVICE_QA=NOT_RUN`; `MOBILE_USER_APPROVAL=PENDING`; `DESKTOP_REGRESSION_QA=PENDING`; `PRODUCTION_FORECAST=NOT_CONNECTED`.
