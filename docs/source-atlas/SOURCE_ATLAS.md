@@ -45,3 +45,11 @@
 - `src/lib/medeus/glyph-fog.ts` — new faster timings, per-glyph emergence.
 - `src/lib/medeus/orb-field.ts` — user provisional state acceptance; frozen/unmodified.
 - Browser visual user acceptance PENDING.
+
+## Latest orb-origin and sizing derivation — 2026-10-12
+- `docs/decisions/MEDEUS_ORB_SOURCE_AND_SCALE_2026-10-12.md` — user requirement and QA boundaries.
+- Private code `src/lib/medeus/orbit-cleanup.ts` — orbit suppression **external** to living orb, runtime only.
+- Private code `src/lib/medeus/presentation.ts` — invokes above and declares `orbScale:1.23`.
+- Private code `src/components/medeus/MedeusStage.tsx` — enlarges orb WebGL box, translates mic click to orb-internal photon source.
+- `src/lib/medeus/orb-field.ts` — motion state shader unchanged (blob `04fbf8a4432d55cdb964096b42949bb24a248643`).
+- Lovable preview source readback `6c92b87ca0dd69e8a1697e3e5e339871921b9f20`; live screenshot acceptance pending.
