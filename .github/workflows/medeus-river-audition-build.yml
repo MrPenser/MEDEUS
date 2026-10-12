@@ -1,0 +1,43 @@
+name: MEDEUS River A-B-C auditions
+on:
+  push:
+    paths:
+      - .github/workflows/medeus-river-audition-build.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download publicly offered River preview
+        run: |
+          set -euo pipefail
+          curl -LfsS --retry 3 --connect-timeout 15 --max-time 120 \
+            "https://storage.googleapis.com/eleven-public-prod/premade/voices/SAz9YHcvj6GT2YYXdXww/e6c95f0b-2227-491a-b3d7-2249240decb7.mp3" -o river_original.mp3
+          ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 river_original.mp3
+      - name: Render three comparable audition MP3 files
+        run: |
+          set -euo pipefail
+          mkdir -p research/audio/river-audition-v1
+          ffmpeg -y -hide_banner -loglevel error -i river_original.mp3 -af 'aresample=48000,asetrate=48000*0.970,aresample=48000,highpass=f=65,bass=g=3.3:f=175,equalizer=f=430:t=q:w=1.3:g=1.3,treble=g=-1.2:f=5200,acompressor=threshold=0.125:ratio=1.5:attack=8:release=180,loudnorm=I=-19:TP=-2:LRA=7' -c:a libmp3lame -b:a 160k research/audio/river-audition-v1/RIVER_A_DEEP.mp3
+          ffmpeg -y -hide_banner -loglevel error -i river_original.mp3 -af 'aresample=48000,highpass=f=72,bass=g=2.0:f=165,equalizer=f=500:t=q:w=1.3:g=-1.1,equalizer=f=2350:t=q:w=1:g=1.4,treble=g=0.5:f=5200,acompressor=threshold=0.12:ratio=1.4:attack=9:release=190,loudnorm=I=-19:TP=-2:LRA=7' -c:a libmp3lame -b:a 160k research/audio/river-audition-v1/RIVER_B_DUAL.mp3
+          ffmpeg -y -hide_banner -loglevel error -i river_original.mp3 -af 'aresample=48000,highpass=f=78,bass=g=1.5:f=155,equalizer=f=430:t=q:w=1.3:g=-1.0,treble=g=2.1:f=5100,aecho=0.78:0.21:120|240:0.15|0.07,acompressor=threshold=0.11:ratio=1.45:attack=10:release=200,loudnorm=I=-19:TP=-2:LRA=7' -c:a libmp3lame -b:a 160k research/audio/river-audition-v1/RIVER_C_ETHEREAL.mp3
+          for f in research/audio/river-audition-v1/*.mp3; do ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 "$f"; done
+          sha256sum research/audio/river-audition-v1/*.mp3
+      - name: Upload audition for private choice
+        uses: actions/upload-artifact@v4
+        with:
+          name: MEDEUS_RIVER_3_AUDITIONS
+          path: research/audio/river-audition-v1/*.mp3
+          retention-days: 14
+      - name: Commit direct-playable preview clips
+        run: |
+          set -euo pipefail
+          git config user.name "MEDEUS audition automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add research/audio/river-audition-v1/*.mp3
+          git commit -m "media(medeus): render River A/B/C preview only [skip ci]" || exit 0
+          git push
