@@ -1,6 +1,6 @@
 # MEDEUS — ROADMAP
-**Baseline date:** 2026-10-12 · **Status:** `PLANNED / NOT_PRODUCTION / USER_MOTION_SIGNOFF_PENDING`
-**Identity:** one-page browser WEBSITE, not an installable application. DESKTOP-BROWSER-FIRST development and acceptance; responsive phone-browser adaptation after desktop signoff. The approved master graphic is frozen. MEDEUS is **not** a new ASTRADELIA core component.
+**Baseline date:** 2026-10-12 · **Status:** `DESKTOP_UI_PROVISIONALLY_ACCEPTED / MOBILE_TYPING_USER_PASS / CONVERSATION_BACKEND_NOT_IMPLEMENTED / NOT_PRODUCTION`
+**Identity:** one-page conversational WEBSITE, not a native app; desktop visual first, mobile responsive site now active with tested keyboard. ASTRADELIA-under-the-hood is a FUTURE server integration, not yet a live capability. The approved master graphic is frozen. MEDEUS is **not** a new ASTRADELIA core component.
 
 Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXACT VISUAL LOCK](docs/canon/MEDEUS_VISUAL_MASTER_LOCK_V1.md) → [10 CORE STATES](docs/canon/MEDEUS_CORE_STATE_MODEL_V1.md) → [RECONCILIATION](docs/decisions/MEDEUS_CANON_RECONCILIATION_2026-10-12.md) → [ASTRADELIA boundary](docs/architecture/MEDEUS_PRODUCT_BOUNDARY_V1.md) → [HANDOFF](HANDOFF_STATE.md).
 
@@ -90,3 +90,10 @@ Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXAC
 - **USER_PASS:** Android/mobile text-input gesture and keyboard persistence after `d4ecc140d3332f304b751883d4b1fe92b9a24341`; user confirms «Все ок. Работает».
 - Locked outcome: remove previously unwanted hint, keep native orb input and unchanged 10-state mechanics. Avoid unnecessary redesign or re-opening this solved issue without new evidence.
 - `MOBILE_KEYBOARD_GATE=CLOSED_VERIFIED_BY_USER` (bounded); `FULL_MOBILE_RELEASE_GATE=OPEN`, other features not inferred as PASS.
+
+## 2026-10-12 — Conversational service authority and tuned photon blur (LATEST)
+- **Product architecture:** ChatGPT-like *conversation mechanics*: multi-turn context, follow-ups, long readable responses, source links and downloadable files — expressed within the locked one-scene MEDEUS visual. Intelligent backend requires a verified governed ASTRADELIA gateway. This explicitly expands one-shot prediction-only UX without claiming actual ChatGPT feature/model equivalence.
+- Required new roadmap gates: **C0** persistent multi-turn conversation/session service; **C1** authorized model/tool routing and GEMMAX/GUARDAR evidence bounds; **C2** long readable streaming answers; **C3** verified sources/files; **C4** mobile voice/text parity; **C5** verified forecast-specific capabilities; **C6** hosted checkout; **C7** launch QA.
+- Normative spec: [MEDEUS_CONVERSATIONAL_PRODUCT_CANON_V1](docs/architecture/MEDEUS_CONVERSATIONAL_PRODUCT_CANON_V1.md) and [MEDEUS_LONG_RESPONSE_AND_ARTIFACTS_V1](docs/canon/MEDEUS_LONG_RESPONSE_AND_ARTIFACTS_V1.md).
+- Photonic particles now **less blurry**, with smaller glow and sharper transit while maintaining progression; private site GitHub source `src/lib/medeus/glyph-fog.ts` at `c35d0e2a2a874d483e6a28ed8cb6760beb2253e6`, Lovable readback `ready`. Ten-state orb GLSL and timing unchanged.
+- `PHOTON_BLUR_CODE_SYNC=PASS`, `PHOTON_BLUR_HUMAN_SIGNOFF=PENDING`, `CONVERSATIONAL_BACKEND=NOT_IMPLEMENTED`, `ASTRADELIA_GATEWAY=NOT_CONNECTED`, `PRODUCTION=NOT_AUTHORIZED`.
