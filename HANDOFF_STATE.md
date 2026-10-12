@@ -117,3 +117,12 @@ Apply inherited sequence: `CLOSED_VERIFIED → HANDOFF → ROADMAP/JOURNAL → S
 - Emission `1400ms` (was `3500ms`); materialization `3900ms` (was `8700ms`) with per-letter reveal.
 - `TEN_STATE_MOTION=PROVISIONALLY_ACCEPTED_AND_FROZEN`; `SHARP_FULL_WIDTH_COSMIC_FIELD=UNCHANGED`; `DESKTOP_ONLY_CURRENT`.
 - Verified Lovable source-sync checkpoint `235fed4190b9558f43eeab302a7de492e421517e`; `SOURCE_IMPLEMENTED=true`; `USER_VISUAL_SIGNOFF=PENDING`; `FULL_STAGE_COMPLETION=FALSE`.
+
+## Latest MEDEUS website patch — 2026-10-12
+- `ACTIVE_SITE_SOURCE=MrPenser/medeus-master-asset` (private, Lovable GitHub sync). `ACTIVE_CANON=MrPenser/MEDEUS` (this repository).
+- Latest user direction: mic triggers input, but photons ALWAYS emerge from sphere; remove baked orbit guide lines in presentation; safely enlarge living orb without colliding with logos/answer/other scene locations.
+- `ORB_SCALE=1.23` applied to on-screen WebGL box and hit testing; shader definition `orb-field.ts` unchanged (blob `04fbf8a4432d55cdb964096b42949bb24a248643`). Master PNG remains SHA256 `52244e15720d0dd40faa04914a44f8051a6466c166973b2609ea5d58f0e1de88`.
+- `MIC_TRIGGER != PHOTON_ORIGIN`; first mic contact sets orb-internal source; prior real orb contact reused; direct orb touch retains exact coordinates. In-memory orbital line suppression `orbit-cleanup.ts` uses verified source pixels only.
+- `SITE_GITHUB_TO_LOVABLE_SYNC=PASS`: Lovable returned exact commit `6c92b87ca0dd69e8a1697e3e5e339871921b9f20`, ready=true; source readback confirmed edits.
+- Canon detail: [MEDEUS_ORB_SOURCE_AND_SCALE_2026-10-12](docs/decisions/MEDEUS_ORB_SOURCE_AND_SCALE_2026-10-12.md).
+- `LIVE_BROWSER_MOTION_AND_VISUAL_GATE=PENDING`; `ALL_ORBIT_TRACES_GONE=UNVERIFIED`; `HUMAN_VISUAL_APPROVAL=PENDING`; `PRODUCTION=NOT_AUTHORIZED`. Mobile remains DEFERRED.
