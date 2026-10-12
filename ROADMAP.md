@@ -97,3 +97,9 @@ Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXAC
 - Normative spec: [MEDEUS_CONVERSATIONAL_PRODUCT_CANON_V1](docs/architecture/MEDEUS_CONVERSATIONAL_PRODUCT_CANON_V1.md) and [MEDEUS_LONG_RESPONSE_AND_ARTIFACTS_V1](docs/canon/MEDEUS_LONG_RESPONSE_AND_ARTIFACTS_V1.md).
 - Photonic particles now **less blurry**, with smaller glow and sharper transit while maintaining progression; private site GitHub source `src/lib/medeus/glyph-fog.ts` at `c35d0e2a2a874d483e6a28ed8cb6760beb2253e6`, Lovable readback `ready`. Ten-state orb GLSL and timing unchanged.
 - `PHOTON_BLUR_CODE_SYNC=PASS`, `PHOTON_BLUR_HUMAN_SIGNOFF=PENDING`, `CONVERSATIONAL_BACKEND=NOT_IMPLEMENTED`, `ASTRADELIA_GATEWAY=NOT_CONNECTED`, `PRODUCTION=NOT_AUTHORIZED`.
+
+## 2026-10-12 — User-source greeting sound prepared (separate audio gate)
+- User supplied a 10.16s AMR-NB tonal recording and requested quality processing of timing, timbre and tuning for MEDEUS website welcome.
+- **Prepared, but not yet site-installed:** short ~4.5s (default) + extended ~7.4s greeting, processed original + gentle glass-pad re-synthesis around B-flat/D/F, mastering ~−17 LUFS, 48kHz/24-bit stereo, MP3 and WebM/Opus formats. The conversation delivers downloadable audio pack. No site binary upload claimed.
+- Authority / checksum / integration gate: [MEDEUS_GREETING_SOUND_DESIGN_V1](docs/canon/MEDEUS_GREETING_SOUND_DESIGN_V1.md).
+- Mobile browser autoplay before user interaction is unreliable or prohibited: implement one-time sound on first intentional orb/mic interaction (after user's approval), not autoplay claims. `AUDIO_RENDERED=PASS`; `SITE_AUDIO_UPLOAD=PENDING`; `CLIENT_PLAYBACK=PENDING`; `USER_SOUND_SIGNOFF=PENDING`.
