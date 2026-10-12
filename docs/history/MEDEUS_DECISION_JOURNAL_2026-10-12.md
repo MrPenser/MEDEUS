@@ -12,5 +12,7 @@
 9. User explicitly observed that the delivered demo was just a static image, and v5 merely spun the center; rejected those as meeting the state model. v6 changes presented for evaluation; **no explicit user approval** of v6.
 10. User requests canonical ROADMAP, all canons reconciled and GitHub source of truth.
 
+11. **Latest update:** user instructs: return to DESKTOP version and work everything through there first. `DESKTOP_FIRST` implementation and acceptance supersedes prior mobile-first sequencing only; mobile port is DEFERRED, not abandoned. All existing master/state/photon/localization/UI restrictions persist.
+
 ## Scope caution
 This journal captures decisions and observations, not runtime test evidence nor a claim that all features exist. Earlier assistant claims of successful dynamic states do not supersede user's failed visual acceptance. Technical evidence stays scoped to its tested version.
