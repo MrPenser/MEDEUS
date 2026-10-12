@@ -139,3 +139,10 @@ Apply inherited sequence: `CLOSED_VERIFIED → HANDOFF → ROADMAP/JOURNAL → S
 - Approved-for-now ten-state shader **untouched** blob `04fbf8a4432d55cdb964096b42949bb24a248643`; source master PNG still hash `52244e15720d0dd40faa04914a44f8051a6466c166973b2609ea5d58f0e1de88`.
 - Full contract: [MEDEUS_MOBILE_RESPONSIVE_PORT_2026-10-12](docs/decisions/MEDEUS_MOBILE_RESPONSIVE_PORT_2026-10-12.md).
 - `MOBILE_SOURCE_AND_SYNC=PASS`; `MOBILE_PHYSICAL_DEVICE_QA=NOT_RUN`; `MOBILE_USER_APPROVAL=PENDING`; `DESKTOP_REGRESSION_QA=PENDING`; `PRODUCTION_FORECAST=NOT_CONNECTED`.
+
+## Mobile typing gesture discoverability fix — 2026-10-12
+- User reports that it is not evident how text entry is invoked on mobile. The actual gesture remains: **tap the orb for native keyboard**, **tap microphone for voice recognition** (keyboard fallback if unsupported), **Enter/Send submits**. This does not change the orb-only photon origin, ten states, or locked visual PNG.
+- Website code (private `MrPenser/medeus-master-asset`): `src/components/medeus/MedeusStage.tsx` commit `6d8cd92654894b50fc70bb70190c6c8de00b6759`: small localized, frameless `КОСНИСЬ СФЕРЫ — НАПИШИ ВОПРОС` idle instruction on phone only, vanishes after valid interaction; native text visually stays above the visible mobile keyboard via VisualViewport.
+- `src/styles.css` commit `fe54f1b6c90ad70dbc5aedccc8c0c9821d51e4e3`: subtle breathing hint, reduced-motion fallback. No visible form/button/menu; no changes to core-state GLSL shader.
+- GitHub source readback confirms both commits; Lovable latest commit reports `fe54f1b6c90ad70dbc5aedccc8c0c9821d51e4e3` and `ready`, but `Lovable.read_file(src/styles.css)` initially still returned pre-style content. **Do not claim runtime hint animation fully synchronized until independent style readback.**
+- `HUMAN_ON_DEVICE_KEYBOARD_OPEN=NOT_VERIFIED`; `MOBILE_UI_DISCOVERABILITY=FIX_IMPLEMENTED_PENDING_VISUAL_CHECK`; `PRODUCTION=NOT_AUTHORIZED`.
