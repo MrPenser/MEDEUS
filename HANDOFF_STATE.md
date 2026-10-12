@@ -166,3 +166,9 @@ Apply inherited sequence: `CLOSED_VERIFIED → HANDOFF → ROADMAP/JOURNAL → S
 - Current Lovable website is still demo-only, no general conversation engine, no ASTRADELIA API, no verified source/file output, no live payment. It **does** have user-confirmed mobile keyboard input and provisionally accepted ten state animations. Zero conventional app UI / no accounts remains.
 - Latest separate user correction: **reduce photon blur only**; code `MrPenser/medeus-master-asset/src/lib/medeus/glyph-fog.ts` edit `c35d0e2a2a874d483e6a28ed8cb6760beb2253e6` changed only softer sprite/spread parameters, no ten-state GLSL, materialization duration or original raster change. Lovable provider readback `latest_commit_sha=c35d0e2a2a874d483e6a28ed8cb6760beb2253e6`, ready=true.
 - `PRODUCT_CANON=CONVERSATIONAL_SITE_WITH_ASTRADELIA_FUTURE_BACKEND`; `UI_PHOTON_BLUR_PATCH=SYNCED`; `PHOTON_HUMAN_APPROVAL=PENDING`; `GENERAL_CHAT_AND_ASTRADELIA_INTEGRATION=NOT_IMPLEMENTED`; `STAGE_STATUS=NOT_COMPLETE`.
+
+## 2026-10-12 — User-source greeting sound prepared (separate audio gate)
+- User supplied a 10.16s AMR-NB tonal recording and requested quality processing of timing, timbre and tuning for MEDEUS website welcome.
+- **Prepared, but not yet site-installed:** short ~4.5s (default) + extended ~7.4s greeting, processed original + gentle glass-pad re-synthesis around B-flat/D/F, mastering ~−17 LUFS, 48kHz/24-bit stereo, MP3 and WebM/Opus formats. The conversation delivers downloadable audio pack. No site binary upload claimed.
+- Authority / checksum / integration gate: [MEDEUS_GREETING_SOUND_DESIGN_V1](docs/canon/MEDEUS_GREETING_SOUND_DESIGN_V1.md).
+- Mobile browser autoplay before user interaction is unreliable or prohibited: implement one-time sound on first intentional orb/mic interaction (after user's approval), not autoplay claims. `AUDIO_RENDERED=PASS`; `SITE_AUDIO_UPLOAD=PENDING`; `CLIENT_PLAYBACK=PENDING`; `USER_SOUND_SIGNOFF=PENDING`.
