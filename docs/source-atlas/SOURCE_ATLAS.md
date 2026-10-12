@@ -61,3 +61,10 @@
 - Private source `src/lib/medeus/speech.ts` — native speech availability gate; mic fallback to keyboard when unsupported.
 - Private source `src/routes/__root.tsx`, `src/styles.css` — mobile viewport/safe area and overscroll.
 - Lovable synced code checkpoint `e4cb31a05e3f3238dce4f143035168a825f890cc`. Phone device signoff pending.
+
+## Greeting Audio current lineage — 2026-10-12
+- `docs/canon/MEDEUS_GREETING_SOUND_DESIGN_V1.md` — historical rejected predecessor (AMR processing).
+- `docs/canon/MEDEUS_GREETING_SOUND_DESIGN_V2_ASCENT.md` — CURRENT original ascending sonic logo specification and testing/approval gates.
+- Private Lovable-connected website binary `public/audio/medeus_ascent_deep_v2.wav` Git blob `94d6bd1ee4d57b969d41ae7a93f19c3ae258e299`, 7.4s 48kHz PCM stereo; source commit `7d7f07c2`.
+- Private web component `src/components/medeus/MedeusStage.tsx` gate `?soundDemo=1` enables temporary WAV player and download only during explicit audition, commit `90e5de9e`.
+- No auto-play in normal site; no approval or cross-device audio QA implied by presence of audio file.
