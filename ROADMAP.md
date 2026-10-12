@@ -109,3 +109,9 @@ Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXAC
 - Synthesized entirely new ascending sonic logo, no original AMR audio reused: seven progressively higher notes **B♭2–D3–F3–A3–C4–D4–F4**, sub-B♭ foundation, chime + resonant pad + diffuse stereo. 7.4s, 48kHz stereo WAV (~1.42MB).
 - Stored actual WAV in Lovable-connected website repository `MrPenser/medeus-master-asset/public/audio/medeus_ascent_deep_v2.wav` Git blob `94d6bd1ee4d57b969d41ae7a93f19c3ae258e299`. Preview-only listen/download gated behind `?soundDemo=1`; **normal site playback OFF** pending user signoff.
 - Canon and links: [MEDEUS_GREETING_SOUND_DESIGN_V2_ASCENT](docs/canon/MEDEUS_GREETING_SOUND_DESIGN_V2_ASCENT.md). GitHub-to-Lovable source sync commit `90e5de9e000060c6e5f61f298f1c68157facaf38` verified. `NEW_AUDIO_RENDERED=PASS`; `BROWSER_PLAYBACK_NOT_INDEPENDENTLY_TESTED`; `AUDIO_HUMAN_APPROVAL=PENDING`; `PRODUCTION_SOUND=DISABLED`.
+
+## 2026-10-12 — USER PROVISIONAL SOUND REVIEW
+- The user reviewed the newly synthesized MEDEUS ASCENT V2 sound and said: «для начала сойдет но это не окончательный».
+- Exact adjudication: `V2_AS_WORKING_REFERENCE=PROVISIONAL_ACCEPTED`; `FINAL_AUDIO_SIGNOFF=false`; `FINAL_SOUND_DESIGN=PENDING`.
+- The V2 ascending-only melodic direction and desire for genuine low-frequency depth remain design requirements, but timbre, harmonic sophistication, spatial depth and final sound identity are open to refinement. Do not mistake «сойдет» for full approval.
+- Do not activate the provisional cue as a default/automatic welcome sound solely on this review. If a demo is used, label it as provisional and retain manual or first-gesture playback restrictions.
