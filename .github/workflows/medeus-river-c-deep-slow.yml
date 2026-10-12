@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - .github/workflows/medeus-river-c-deep-slow.yml
+      - scripts/medeus_river_c_render.py
   workflow_dispatch:
 permissions:
   contents: write
