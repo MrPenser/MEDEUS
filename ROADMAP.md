@@ -56,3 +56,10 @@ Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXAC
 - **Current visual acceptance:** `DESKTOP_FULLSCREEN=FAIL`, `PHOTON_TEXT_MOTION=FAIL`, `TEN_STATE_MOTION=FAIL`. No automatic promotion; original master stays frozen.
 - Required precise corrections: [Desktop visual gate v2](docs/verification/MEDEUS_DESKTOP_VISUAL_ACCEPTANCE_GATE_V2_2026-10-12.md) and [Issue #1](https://github.com/MrPenser/MEDEUS/issues/1).
 - `LOVABLE_WORKSPACE_OUT_OF_CREDITS`: this ROADMAP update is documentation only, **not** a live site patch. To continue implementation: restore Lovable build access, or connect site source to GitHub/direct editor.
+
+## 2026-10-12 — USER OVERRIDE: states provisionally kept; full-bleed cosmic field MUST be sharp
+- **Latest user decision:** ten state motions are acceptable *for now*; freeze their current code/visual behavior. This supersedes the previous visual-rejection task for the motion component only, **not** technical production readiness.
+- **New issue:** no blurred/fuzzy frame at either side; artwork must read as ONE CONTINUOUS sharp cosmic field across the entire browser viewport, no black gutters or duplicated/scaled background.
+- **Implementation:** only the verified locked master PNG is sampled. New `src/lib/medeus/cosmic-field.ts` implements a continuous, monotone horizontal extension of the outer space at C1 join boundaries. Logo, orb, core geometry, microphone and mid-scene stay isotropically scaled and correctly positioned. Original binary never changed.
+- **Website source (private):** `MrPenser/medeus-master-asset` commits `e0a5939` (sharp cosmic field), `4b5e3fd` (site render), `70cbd2a` (deleted deprecated blur). Lovable project readback confirmed `latest_commit_sha=70cbd2a2c0d6636217797fed92a8ca4c45a808fc`, `ready`, and verified newly imported canvas source; `SOURCE_TO_PREVIEW_SYNC=PASS`.
+- **Evidence limit:** `USER_FULL_VIEWPORT_SHARP_FIELD_SIGNOFF=PENDING` until user checks the current preview visually. Do not call the site finished on the strength of code readback. Old blur-based appearance is superseded.
