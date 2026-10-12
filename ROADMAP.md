@@ -160,3 +160,13 @@ Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXAC
 - Liquid preview: `https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/`; classical fallback: same URL + `?surface=classic`.
 - `CODE_LIVE_SYNC=PASS`; `GLSL_COMPILE=PASS`; `SITE_BUILD=PASS`; `AUTOMATED_TESTS=6_PASS`; `USER_VISUAL_SIGNOFF=PENDING`; `MOBILE_GPU_REAL_DEVICE_CHECK=PENDING`.
 - Canon details [MEDEUS_LIVING_OCEAN_SURFACE_V1](docs/canon/MEDEUS_LIVING_OCEAN_SURFACE_V1.md). Do not claim physical fluid simulation or finalized visual appearance; this is a shader-based liquid optical membrane.
+
+
+## 2026-10-12 — Liquid surface V1.1 hover and volumetric flow
+- User-tested V1 result: click impact GOOD; idle looked like poor 2-D swinging, passive cursor hover had no response. DO NOT consider V1 user-approved.
+- In private site repo `MrPenser/medeus-master-asset`, shader commit `a8990df7fd54262856b5aa8f41eaff38e5825421` changes ONLY the outer water membrane to asymmetrically flowing gyres, spherical optical normals and soft moving highlights, with a reversible hover lens/viscous contour tug.
+- Stage commit `048b68ec734885f41ff2a49b1071e1dac81aac02` adds spring-damped cursor following (145ms) and fluid release (230ms), with no click required and no phone touch-input hijack. The click ripple survives unchanged.
+- Verified original 10-state `sampleState` function is byte-identical (2656 characters) to pre-V1.1 version; immutable master and original vertex shader remain unchanged.
+- GitHub Actions run `38293138422`: GLSL shader PASS; site Bun Vite build PASS; tests PASS. Lovable status `ready`, latest source commit matched `048b68ec...`. No visual/browser subjective acceptance claimed yet.
+- Try fluid `https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/`; rollback via `?surface=classic`. `LIQUID_V1_1_READY_FOR_USER_QA=true`; `LIQUID_FINAL_VISUAL_APPROVAL=false`.
+- Canon [MEDEUS_LIVING_OCEAN_SURFACE_V1](docs/canon/MEDEUS_LIVING_OCEAN_SURFACE_V1.md).
