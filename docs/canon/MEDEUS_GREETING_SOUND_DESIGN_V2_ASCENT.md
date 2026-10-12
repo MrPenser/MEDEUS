@@ -29,3 +29,9 @@ The user rejected earlier processed recording: sound quality poor, melody should
 5. Ensure 10-state orb motion, source pixel geometry, photon origin, voice recognition and mobile text focus stay unaffected.
 
 `SOURCE_GENERATION=PASS`; `WAV_COMMITTED=PASS`; `LOVABLE_CODE_SYNC=PASS`; `BROWSER_AUDIO_PLAYBACK=NOT_INDEPENDENTLY_TESTED`; `USER_SIGNOFF=PENDING`; `NORMAL_SITE_GREETING_SOUND=NOT_ENABLED`.
+
+## 2026-10-12 — USER PROVISIONAL SOUND REVIEW
+- The user reviewed the newly synthesized MEDEUS ASCENT V2 sound and said: «для начала сойдет но это не окончательный».
+- Exact adjudication: `V2_AS_WORKING_REFERENCE=PROVISIONAL_ACCEPTED`; `FINAL_AUDIO_SIGNOFF=false`; `FINAL_SOUND_DESIGN=PENDING`.
+- The V2 ascending-only melodic direction and desire for genuine low-frequency depth remain design requirements, but timbre, harmonic sophistication, spatial depth and final sound identity are open to refinement. Do not mistake «сойдет» for full approval.
+- Do not activate the provisional cue as a default/automatic welcome sound solely on this review. If a demo is used, label it as provisional and retain manual or first-gesture playback restrictions.
