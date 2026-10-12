@@ -85,3 +85,8 @@ Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXAC
 - Working source now branches by phone viewport and uses `mobile-field.ts` / `MedeusStage.tsx` for full-bleed portrait/landscape, centered orb, frameless native keyboard, microphone speech or keyboard fallback; emissions still originate from the orb.
 - Detailed contract/evidence: [MEDEUS_MOBILE_RESPONSIVE_PORT_2026-10-12](docs/decisions/MEDEUS_MOBILE_RESPONSIVE_PORT_2026-10-12.md).
 - `MOBILE_CODE_COMMITTED=true`; `LOVABLE_CODE_SYNC=PASS`; `MOBILE_HUMAN_VISUAL_SIGNOFF=PENDING`; `ANDROID_BROWSER_QA=PENDING`; `IOS_BROWSER_QA=PENDING`. Do not confuse preview READY with device pass.
+
+## 2026-10-12 — mobile keyboard acceptance result
+- **USER_PASS:** Android/mobile text-input gesture and keyboard persistence after `d4ecc140d3332f304b751883d4b1fe92b9a24341`; user confirms «Все ок. Работает».
+- Locked outcome: remove previously unwanted hint, keep native orb input and unchanged 10-state mechanics. Avoid unnecessary redesign or re-opening this solved issue without new evidence.
+- `MOBILE_KEYBOARD_GATE=CLOSED_VERIFIED_BY_USER` (bounded); `FULL_MOBILE_RELEASE_GATE=OPEN`, other features not inferred as PASS.
