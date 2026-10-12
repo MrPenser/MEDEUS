@@ -40,3 +40,6 @@ MEDEUS is a **single-page website**, not a native app. In answer to the user's q
 3. PDF/DOCX/XLSX generated only where appropriate/authorized, files open on Android/iOS/desktop, retain verifiable data and source citations.
 4. No phantom download buttons or private-file leaks; anonymous ephemeral entitlement and clear retention.
 5. Independently review that existing short-answer core animations and site master design remain unchanged.
+
+## Conversational product alignment — 2026-10-12
+Long response is a part of **multi-turn context-bearing dialogue** rather than a stand-alone one-off report. A follow-up inherits the current conversation/session and may ask to refine the just-displayed analysis, open verified sources or export a verified artifact. Source-of-truth: [MEDEUS_CONVERSATIONAL_PRODUCT_CANON_V1](../architecture/MEDEUS_CONVERSATIONAL_PRODUCT_CANON_V1.md). It is **not yet implemented** in the demo website; don't simulate citations or successful downloads.
