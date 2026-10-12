@@ -185,3 +185,9 @@ Apply inherited sequence: `CLOSED_VERIFIED → HANDOFF → ROADMAP/JOURNAL → S
 - Exact adjudication: `V2_AS_WORKING_REFERENCE=PROVISIONAL_ACCEPTED`; `FINAL_AUDIO_SIGNOFF=false`; `FINAL_SOUND_DESIGN=PENDING`.
 - The V2 ascending-only melodic direction and desire for genuine low-frequency depth remain design requirements, but timbre, harmonic sophistication, spatial depth and final sound identity are open to refinement. Do not mistake «сойдет» for full approval.
 - Do not activate the provisional cue as a default/automatic welcome sound solely on this review. If a demo is used, label it as provisional and retain manual or first-gesture playback restrictions.
+
+## 2026-10-12 — Spoken welcome phrase locked
+- User requires: the very first phrase addressed to every visitor by the MEDEUS core is the translation of «Добро пожаловать!» into the visitor's language. For illustration: Russian «Добро пожаловать!», English “Welcome!”, Turkish “Hoş geldiniz!”.
+- Spoken delivery must use **one androgynous core voice** (distinct from the greeting's provisional instrumental sound).
+- One welcome per new visitor session; after browser-approved user gesture; first spoken phrase precedes other synthesized answers. Resolve language from user preference or browser locale, not IP alone. Provide honest fallback if a requested language is not available.
+- Canonical source: `docs/canon/MEDEUS_CORE_VOICE_IDENTITY_V1.md`; requirement `LOCKED`. Real multilingual TTS/audio integration `NOT_IMPLEMENTED`; vocal identity approval `PENDING`; final welcome music `PENDING`.
