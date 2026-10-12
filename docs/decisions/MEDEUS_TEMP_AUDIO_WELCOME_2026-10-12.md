@@ -30,3 +30,9 @@ The provider did produce a true English River “Welcome!” via vidIQ job `job_
 2. Obtain properly licensed / provider-routed River TTS for RU/EN/TR first, then open-ended locale support; record authorized voice IDs, API cost and latency.
 3. Verify same first-phrase precedence, one-per-session semantics, microphone no-feedback, tab visibility and mute/volume preferences.
 4. Let user approve or reject current temporary version independently from final voice/sound design.
+
+## Final source synchronization check
+- GitHub website code source commit `7c65a2abb801735b70052e2e2f77c8f70cab4213` is the latest checked source.
+- Lovable `get_project`: `latest_commit_sha=7c65a2abb801735b70052e2e2f77c8f70cab4213`, `project.status=ready`, site preview `https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app`.
+- Independent `read_file` checks at that exact commit confirm `createTemporaryGreeting`, no-repeat music guard, localized welcome text, stage orb/mic hooks, and River C3 diagnostic audition source.
+- `SOURCE_SYNC_AND_READBACK=PASS`; `SITE_BUILD_STATUS=READY_PROVIDER_REPORTED`; `REAL_DESKTOP_SPEAKER_QA=NOT_RUN`; `REAL_MOBILE_SPEAKER_QA=NOT_RUN`; `REAL_RIVER_LOCALIZED_TTS=NOT_CONNECTED`.
