@@ -26,3 +26,6 @@
 - Full PDF/HTML source-atlas mirroring, original binary custody, SHA manifest for binaries, Library and global registry propagation: `PENDING`.
 
 **Rule:** do not conflate inventory of file names with custody/validity of assets; readback every authoritative surface before `COMPLETE`.
+
+## Readback receipt
+- `docs/verification/MEDEUS_GITHUB_READBACK_2026-10-12.md` — 10/10 baseline document fetches verified and exact Git blob SHAs captured. Receipt readback is tracked independently; this does not close motion, binary custody, or global inheritance gates.
