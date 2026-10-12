@@ -37,3 +37,11 @@
 - `src/styles.css` — deleted deprecated blurry gutter/edge mask CSS.
 - `src/lib/medeus/orb-field.ts` — previous ten-state engine, **not changed** by sharp background patch; user accepts provisionally.
 - GitHub source to Lovable commit readback: `70cbd2a2c0d6636217797fed92a8ca4c45a808fc`; user visual signoff pending.
+
+## Latest desktop overlay authority — 2026-10-12
+- `docs/decisions/MEDEUS_DESKTOP_LAYOUT_REVISION_2026-10-12.md`: user-approved removal of two marginal labels, original mic relocated below text, faster progressive photonic answer.
+- Working repo `MrPenser/medeus-master-asset/src/lib/medeus/presentation.ts` — in-memory clean presentation derived only from SHA-256-verified original pixels, exact copied mic sprite, no source file modification.
+- `src/components/medeus/MedeusStage.tsx` — composition, moved text anchor, clickable relocated microphone.
+- `src/lib/medeus/glyph-fog.ts` — new faster timings, per-glyph emergence.
+- `src/lib/medeus/orb-field.ts` — user provisional state acceptance; frozen/unmodified.
+- Browser visual user acceptance PENDING.
