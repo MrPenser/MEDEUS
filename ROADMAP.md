@@ -49,3 +49,10 @@ Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXAC
 - **Animations v1-v6** are samples/evidence, not accepted master behavior. No automatic promotion.
 - MEDEUS may reuse permitted public ASTRADELIA capabilities, but must not alter `MrPenser/genius-ai` gates, architecture or history.
 - Inheritance/doc closure follows `CLOSED_VERIFIED → HANDOFF → ROADMAP/JOURNAL → SOURCE_ATLAS → READBACK → COMPLETE`. Not yet completed; all unverified stages remain OPEN.
+
+## 2026-10-12 — Desktop live visual review reopened (HUMAN FAIL)
+- Reported by user on current Lovable build: wide desktop retains empty side areas, glyphs fall/appear too abruptly, and perceptually distinct state reactions are fewer than 5 of required 10.
+- Root cause recorded: image `object-contain` + insufficiently blended gutter; `glyph-fog.ts` reveals *all text* in a global ~0.9s opacity jump; 10 shader branches do not demonstrate 10 distinct visible behaviors.
+- **Current visual acceptance:** `DESKTOP_FULLSCREEN=FAIL`, `PHOTON_TEXT_MOTION=FAIL`, `TEN_STATE_MOTION=FAIL`. No automatic promotion; original master stays frozen.
+- Required precise corrections: [Desktop visual gate v2](docs/verification/MEDEUS_DESKTOP_VISUAL_ACCEPTANCE_GATE_V2_2026-10-12.md) and [Issue #1](https://github.com/MrPenser/MEDEUS/issues/1).
+- `LOVABLE_WORKSPACE_OUT_OF_CREDITS`: this ROADMAP update is documentation only, **not** a live site patch. To continue implementation: restore Lovable build access, or connect site source to GitHub/direct editor.
