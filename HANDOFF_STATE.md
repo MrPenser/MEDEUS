@@ -100,3 +100,11 @@ Apply inherited sequence: `CLOSED_VERIFIED → HANDOFF → ROADMAP/JOURNAL → S
 - Review main desktop scene: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app
 - Review all ten without normal UI chrome: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?tour=1 (diagnostic-only state labels).
 - `SOURCE_PATCH_SYNCHRONIZED=PASS`; `USER_FULL_WIDTH_VERDICT=PENDING`; `USER_GLYPH_MOTION_VERDICT=PENDING`; `USER_TEN_MOTION_VERDICT=PENDING`. Prior screenshot complaints remain the acceptance baseline until user rechecks this version. PNG master file unchanged; site still only visual demo, no forecast/payment integration.
+
+## Latest visual directive — 2026-10-12: SHARP SEAMLESS COSMIC FIELD
+- User verdict: `TEN_STATE_VISUAL_BEHAVIOR=PROVISIONALLY_ACCEPTED` ("состояния пока оставим такими — хорошо"); **do not further modify the 10-state animation behavior** without new instruction. This is a bounded visual signoff, not production/API acceptance.
+- New hard requirement: `NO_BLURRED_PAGE_EDGES=true`, `ONE_CONTINUOUS_COSMIC_FIELD_FULL_VIEWPORT=true`, no black side columns, no visible framing.
+- New desktop site implementation in private code repo: `src/lib/medeus/cosmic-field.ts` renders exclusively the SHA256-verified approved PNG as a continuous full-viewport panorama. Center `x=240..1208` original pixels retain original isotropic scale; only peripheral space is smoothly horizontally extended (a C1 edge mapping, NOT blur or duplicated cover). Master PNG itself remains unchanged.
+- Code commits: `e0a5939f7023b611a06b9c661840db08c9432c31` (sharp panorama), `4b5e3fd4787a6f9f284273c87bc9a6c2cea5cd89` (website composition), `70cbd2a2c0d6636217797fed92a8ca4c45a808fc` (remove blurred styles).
+- `SHARP_FULL_BLEED_CODE_WRITTEN=true`; `LATEST_GITHUB_COMMIT=70cbd2a2c0d6636217797fed92a8ca4c45a808fc`. Lovable preview sync and user rendering **must be separately checked** before `VISUAL_WIDTH_PASS`. `MOBILE=DEFERRED`.
+- Preserve accepted core-state shaders (`orb-field.ts`) and existing photon timing/glyph code unchanged during this background repair.
