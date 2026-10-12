@@ -36,3 +36,12 @@ The voice should feel as if it belongs to the living core itself: **deep but lum
 - `TTS_ENGINE_CONNECTED=FALSE`; `SITE_OUTGOING_SPEECH=NOT_IMPLEMENTED`
 - `GREETING_ASCENT_V2=PROVISIONAL_ONLY`; site welcome sound is NOT auto-enabled by this decision.
 - `TEN_ORB_STATES_UNCHANGED`; `LOCKED_MASTER_PNG_UNCHANGED`; `ASTRADELIA_BACKEND_NOT_CONNECTED`.
+
+## FIRST SPOKEN PHRASE — globally localized welcome
+- **Mandatory first intelligible spoken phrase addressed to a new visitor:** the equivalent of **«Добро пожаловать!»** in that visitor's language. This is not a generic AI assistant self-introduction, nor a question or sales pitch. The welcome has priority before any other synthesized utterance (including a model-generated answer).
+- Examples are illustrative only: `ru: «Добро пожаловать!»`, `en: “Welcome!”`, `tr: “Hoş geldiniz!”`. For other languages, use a grammatically and culturally natural verified translation; do not limit product support to these examples.
+- Resolve language from an explicit visitor selection or known conversation preference where available; otherwise from browser locale preference (`navigator.languages`, BCP-47). **Do not infer spoken language solely from IP/geolocation.** If TTS for a language is unavailable, transparently fall back to supported speech plus appropriately localized visible text; do not misrepresent a fallback as that user's language.
+- The phrase is spoken **with the one coherent androgynous voice of the core**, not with the nonverbal ASCENT motif. Match pronunciation, warmth, depth, deliberate pace and timbre across languages; do not switch male/female speakers by language.
+- Browser autoplay rules: greeting may be visually displayed immediately if desired, but speech must begin only after the first allowed user interaction / explicit audio permission. Reserve greeting as the first sentence of speech even if that interaction is the user's initial question; do not block the question from being received.
+- **Once per new visit/session**, not before every question or every new page state. Avoid surprising the user with duplicate greetings during an active conversation. Allow mute or skip. Distinguish `GREETING_SPOKEN` (actual audio playback confirmed) from `GREETING_SCHEDULED` (pending gesture) and `GREETING_UNAVAILABLE`.
+- `FIRST_SPOKEN_PHRASE_CANON=LOCALIZED_WELCOME`; `ALL_LANGUAGES_IMPLEMENTED=FALSE`; `TTS_GREETING_RUNTIME=NOT_IMPLEMENTED`; `USER_VOICE_PRESET_APPROVAL=PENDING`.
