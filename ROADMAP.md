@@ -1,6 +1,6 @@
 # MEDEUS — ROADMAP
 **Baseline date:** 2026-10-12 · **Status:** `PLANNED / NOT_PRODUCTION / USER_MOTION_SIGNOFF_PENDING`
-**Identity:** single-screen, voice/text interface; DESKTOP-FIRST DEVELOPMENT AND ACCEPTANCE; mobile port after desktop signoff. The approved master graphic is frozen. MEDEUS is **not** a new ASTRADELIA core component.
+**Identity:** one-page browser WEBSITE, not an installable application. DESKTOP-BROWSER-FIRST development and acceptance; responsive phone-browser adaptation after desktop signoff. The approved master graphic is frozen. MEDEUS is **not** a new ASTRADELIA core component.
 
 Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXACT VISUAL LOCK](docs/canon/MEDEUS_VISUAL_MASTER_LOCK_V1.md) → [10 CORE STATES](docs/canon/MEDEUS_CORE_STATE_MODEL_V1.md) → [RECONCILIATION](docs/decisions/MEDEUS_CANON_RECONCILIATION_2026-10-12.md) → [ASTRADELIA boundary](docs/architecture/MEDEUS_PRODUCT_BOUNDARY_V1.md) → [HANDOFF](HANDOFF_STATE.md).
 
