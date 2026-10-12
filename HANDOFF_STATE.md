@@ -126,3 +126,8 @@ Apply inherited sequence: `CLOSED_VERIFIED → HANDOFF → ROADMAP/JOURNAL → S
 - `SITE_GITHUB_TO_LOVABLE_SYNC=PASS`: Lovable returned exact commit `6c92b87ca0dd69e8a1697e3e5e339871921b9f20`, ready=true; source readback confirmed edits.
 - Canon detail: [MEDEUS_ORB_SOURCE_AND_SCALE_2026-10-12](docs/decisions/MEDEUS_ORB_SOURCE_AND_SCALE_2026-10-12.md).
 - `LIVE_BROWSER_MOTION_AND_VISUAL_GATE=PENDING`; `ALL_ORBIT_TRACES_GONE=UNVERIFIED`; `HUMAN_VISUAL_APPROVAL=PENDING`; `PRODUCTION=NOT_AUTHORIZED`. Mobile remains DEFERRED.
+
+## Orbit removal latest readback (2026-10-12)
+- Refined orbit cleanup commit `a358bb34397eeb9505998abc663ff638a7e45161` **confirmed synchronized** in Lovable preview (`ready=true`); source mask only targets brighter thin external guide lines, avoiding previous smearing. May leave faint remnant guides: visual acceptance PENDING.
+- Mic activation now stores source coordinate inside visual orb, never mic position. `orbScale=1.23`; all 10 original state shaders remain frozen (blob `04fbf8a4432d55cdb964096b42949bb24a248643`).
+- Source and evidence in [ORB_SOURCE_AND_SCALE](docs/decisions/MEDEUS_ORB_SOURCE_AND_SCALE_2026-10-12.md). `LIVE_VISUAL_APPROVAL=PENDING`; `MOBILE_WORK=DEFERRED`.
