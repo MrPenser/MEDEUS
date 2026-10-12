@@ -92,3 +92,11 @@ Apply inherited sequence: `CLOSED_VERIFIED → HANDOFF → ROADMAP/JOURNAL → S
 - Exact custody and source commit receipt: [GitHub site sync check](docs/verification/MEDEUS_SITE_GITHUB_SYNC_2026-10-12.md). Original PNG remains frozen, no source redraw.
 - Next safe action: ask user to hard-refresh [Lovable desktop preview](https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app), evaluate full width, slow photon text, and different core behaviors. If not conforming, iterate in **code repo** via GitHub, not through credit-limited Lovable assistant.
 - `DESKTOP_VISUAL_GATE=RECHECK_REQUIRED`, `TEN_STATE_HUMAN_SIGNOFF=PENDING`, `MOBILE_PORT=DEFERRED`, `PRODUCTION=NOT_AUTHORIZED`.
+
+## Latest site checkpoint — GitHub connected & v7 desktop corrections synchronized (2026-10-12)
+- Real Lovable source is in private `MrPenser/medeus-master-asset`; docs/roadmap remain here. **GitHub push → Lovable preview confirmed**.
+- Updated site commits: `123b63e` CSS same-source peripheral fill; `5edd9ac` pixel-ratio-correct foreground feather; `96f3ce1` emitter 3500ms + materialization 8700ms with staged per-glyph condensation; `5ff9141` stronger ten distinct internal optical fields; `47fb4f0` opt-in motion tour (`?tour=1`, 4.6 seconds/state, hidden from normal UI).
+- Verified via Lovable `get_project`: `latest_commit_sha=47fb4f04cecc47b728246cffd0e3daed26cf9f17`, `status=ready`, `agentFinished=true`. **Source-to-preview sync PASS**, separate from **human visual acceptance PENDING**.
+- Review main desktop scene: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app
+- Review all ten without normal UI chrome: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?tour=1 (diagnostic-only state labels).
+- `SOURCE_PATCH_SYNCHRONIZED=PASS`; `USER_FULL_WIDTH_VERDICT=PENDING`; `USER_GLYPH_MOTION_VERDICT=PENDING`; `USER_TEN_MOTION_VERDICT=PENDING`. Prior screenshot complaints remain the acceptance baseline until user rechecks this version. PNG master file unchanged; site still only visual demo, no forecast/payment integration.
