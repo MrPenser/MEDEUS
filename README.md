@@ -1,6 +1,6 @@
 # MEDEUS
 
-**MEDEUS** is a mobile-first, voice-first, single-screen experimental interface for evidence-grounded probabilistic answers. The user-approved **visual master is immutable**. MEDEUS is a separate product/interface, not an ASTRADELIA core node.
+**MEDEUS** is a single-page website (not a native mobile or desktop application), with a voice-first experimental interface for evidence-grounded probabilistic answers. The user-approved **visual master is immutable**. MEDEUS is a separate product/interface, not an ASTRADELIA core node.
 
 > **Current status (2026-10-12): CANON_DOCS_IN_PROGRESS / PROTOTYPE_NOT_ACCEPTED / PRODUCTION_NOT_AUTHORIZED.** A demo is not a validated forecast service.
 
