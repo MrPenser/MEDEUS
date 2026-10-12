@@ -153,3 +153,9 @@ Apply inherited sequence: `CLOSED_VERIFIED → HANDOFF → ROADMAP/JOURNAL → S
 - **Source fix in connected private website repo `MrPenser/medeus-master-asset`:** `db1e6b69be6dbf0a71edf7e1748379e4adee88e6` places transparent, circular native textarea directly over the sphere with actual touch events, relies on browser-native focus when user taps textarea, avoids rerendering/resizing the focused textarea when mobile keyboard changes viewport height; deletes the hint JSX, all hint state and copy. `bdcac9b52d01fdb7ae360b55b24e764b283c99e5` deletes hint CSS; `d4ecc140d3332f304b751883d4b1fe92b9a24341` makes focus hit-area cover orb circumference.
 - **Continuing contract:** native IME/Russian/paste; Enter/Send submits; microphone invokes voice when supported; photon origin remains inside sphere; all 10 approved-for-now GLSL states unchanged (blob SHA `04fbf8a4432d55cdb964096b42949bb24a248643`).
 - `CODE_PATCH_COMMITTED=true`; `HINT_REMOVED_IN_SOURCE=true`; `KEYBOARD_HOLD_USER_VERDICT=PENDING`; `ANDROID_PHYSICAL_BROWSER_TEST=NOT_RUN`. Do not claim the hardware failure resolved until the user tests the refreshed site.
+
+## Mobile keyboard human acceptance — 2026-10-12
+- User reports after the native textarea focus patch: **«Все ок. Работает»** in direct response to mobile keyboard focus/persistence verification.
+- Bounded human verdict: `MOBILE_KEYBOARD_FOCUS_AND_TYPING=USER_PASS`; `MOBILE_HINT_REMOVAL=IMPLEMENTED`; `ACCEPTANCE_SOURCE=HUMAN`.
+- Accepted working source checkpoint: `MrPenser/medeus-master-asset` at Lovable-synced commit `d4ecc140d3332f304b751883d4b1fe92b9a24341`. The native textarea holds focus during typing and the unwanted hint was removed.
+- This **does not** close phone voice-recognition QA, landscape QA, exact appearance QA, full forecast API, payments or production readiness. `STAGE_STATUS=NOT_COMPLETE` remains.
