@@ -29,3 +29,11 @@
 
 ## Readback receipt
 - `docs/verification/MEDEUS_GITHUB_READBACK_2026-10-12.md` — 10/10 baseline document fetches verified and exact Git blob SHAs captured. Receipt readback is tracked independently; this does not close motion, binary custody, or global inheritance gates.
+
+## Latest website implementation surface — desktop sharp cosmic field (2026-10-12)
+- Canon repo (this): `MrPenser/MEDEUS`; Lovable-synced **working code** repo (private): `MrPenser/medeus-master-asset`.
+- `src/lib/medeus/cosmic-field.ts` — builds seamless sharp master-derived panorama, protected center; no blur and no alternate image.
+- `src/components/medeus/MedeusStage.tsx` — renders panoramic 2D canvas behind existing WebGL orb/photons.
+- `src/styles.css` — deleted deprecated blurry gutter/edge mask CSS.
+- `src/lib/medeus/orb-field.ts` — previous ten-state engine, **not changed** by sharp background patch; user accepts provisionally.
+- GitHub source to Lovable commit readback: `70cbd2a2c0d6636217797fed92a8ca4c45a808fc`; user visual signoff pending.
