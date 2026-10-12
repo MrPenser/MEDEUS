@@ -58,3 +58,11 @@ Latest status seen before documenting: **inprogress**, do not treat them as gene
 - Source: `research/audio/river-audition-v1/RIVER_C_ETHEREAL.mp3`. Result: `research/audio/river-audition-v2/RIVER_C_MINUS_100HZ_SOFT_SLOW.mp3`, Git blob `2969522d49ba2ec61f45db388bf1b4f32eb81dfc`; **4.752 seconds**, **114,669 bytes**, 192 kbps MP3. GitHub readback and Actions run `38281522545` = `success`.
 - Direct audition: `https://raw.githubusercontent.com/MrPenser/MEDEUS/main/research/audio/river-audition-v2/RIVER_C_MINUS_100HZ_SOFT_SLOW.mp3`.
 - `VARIANT_C_PROCESSING=RENDERED_AND_SOURCE_VERIFIED`; `USER_AUDIO_APPROVAL=PENDING`; `PRODUCTION_VOICE_CONNECTION=NOT_AUTHORIZED`. The existing MEDEUS website/audio is unchanged.
+
+## River C repaired to modest −9 Hz — 2026-10-12
+- User rejected prior approximately −100 Hz variant as comically too low («голос из ада ....))», «медеус сатана))») and explicitly requested **return to original River C then lower by only 9 Hz**, preserving softness and slower speaking tempo. The prior `RIVER_C_MINUS_100HZ_SOFT_SLOW.mp3` is `REJECTED_SUPERSEDED`, not current candidate.
+- The processing script `scripts/medeus_river_c_render.py` was changed to calculate `new_f0 = source_F0 - 9`, preserving formants via FFmpeg rubberband. Original River C measured median F0 approximately `175.8 Hz`; requested target `166.8 Hz`, pitch ratio `0.94881`. `tempo=0.80` (20% slower); smooth high-frequency EQ, bass foundation, light compression, target −19 LUFS.
+- Output is an actual MP3 at `research/audio/river-audition-v2/RIVER_C_MINUS_9HZ_SOFT_SLOW.mp3` (4.680 seconds, 112,941 bytes). GitHub readback blob `799de92b87743fafbf13d9cc579e4f9c73096f32`, workflow run `38282430536` completed successfully.
+- Audition direct link: `https://raw.githubusercontent.com/MrPenser/MEDEUS/main/research/audio/river-audition-v2/RIVER_C_MINUS_9HZ_SOFT_SLOW.mp3`.
+- Exact **post-processing F0 independently measured = NOT_RUN** (target is calculated against original estimate); independent user subjective evaluation `PENDING`. Sample is still English provider demo (NOT canonical RU greeting), and final speaking voice has NOT been approved.
+- `C_CURRENT_CANDIDATE=MINUS_9HZ_SOFT_SLOW`; `C_MINUS_100HZ=REJECTED`; `VOICE_FINAL_SIGNOFF=false`; `SITE_AUDIO_INTEGRATION_AUTHORIZED=false`. No modification to MEDEUS website or original approved master/shader.
