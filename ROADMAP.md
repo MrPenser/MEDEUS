@@ -72,3 +72,10 @@ Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXAC
 - Emission `1400ms` (was `3500ms`); materialization `3900ms` (was `8700ms`) with per-letter reveal.
 - `TEN_STATE_MOTION=PROVISIONALLY_ACCEPTED_AND_FROZEN`; `SHARP_FULL_WIDTH_COSMIC_FIELD=UNCHANGED`; `DESKTOP_ONLY_CURRENT`.
 - Verified Lovable source-sync checkpoint `235fed4190b9558f43eeab302a7de492e421517e`; `SOURCE_IMPLEMENTED=true`; `USER_VISUAL_SIGNOFF=PENDING`; `FULL_STAGE_COMPLETION=FALSE`.
+
+## 2026-10-12 — Orb/microphone origin separation and maximal safe enlargement
+- User requires ALL emitted text/light to originate in the **orb**, even when mic was clicked. Contact with sphere uses exact orb touch; mic is an input trigger only, with fallback origin inside sphere. `MIC_COORDINATES_NEVER_AS_PHOTON_SOURCE`.
+- User wants **orbit lines visually suppressed** and **living orb maximized safely** (not overlaid on title/answer/mic). Current bounded candidate is 1.23x radius, CSS/WebGL geometry only, state behaviors unchanged.
+- Implemented in Lovable-connected working GitHub repo, synced commit `6c92b87ca0dd69e8a1697e3e5e339871921b9f20`. Original hash unchanged. Source-orbit cleanup uses derived runtime canvas, not altered PNG.
+- Authority and QA: [MEDEUS_ORB_SOURCE_AND_SCALE_2026-10-12](docs/decisions/MEDEUS_ORB_SOURCE_AND_SCALE_2026-10-12.md).
+- `SOURCE_SYNC=PASS`; `ORB_ORIGIN_LOGIC=PATCHED`; `ORBIT_REMOVAL_HUMAN_VISUAL_PASS=PENDING`; `ORB_SCALE_HUMAN_VISUAL_PASS=PENDING`. Do not modify the provisionally approved 10 state shaders.
