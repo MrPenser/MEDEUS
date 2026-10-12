@@ -150,3 +150,13 @@ Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXAC
 
 ## User visual concept — druid face (not a change order)
 - User asked whether MEDEUS should become a huge druid-like face with eyes CLOSED on entrance, AWAKENING/opening eyes as conversation begins. This is **a concept for discussion, not explicit approval to replace the original locked sphere master**. Potential visual direction is an ageless androgynous face emerging from the live core. No master/shader/animation edits authorized until exact visual approval.
+
+## 2026-10-12 — LIVING OCEAN SURFACE: first runnable trial, reversible
+- User rejected druid/humanoid face; asked for living ocean-like fluid **surface** with the exact ten established subconscious/optical processes **underwater**. Explicit "запускай" authorized source deployment as a **trial**, not final visual lock.
+- Site repo `MrPenser/medeus-master-asset`: `src/lib/medeus/orb-field.ts` non-destructive liquid membrane after existing `sampleState` passes (UV refraction, tangent slope, specular/fresnel edge sheen, single causal touch ring, damped continuous waves). WebGL1, original master remains SHA256-verified/untouched, 10 existing states unchanged; fixed shader reserved identifier via commit `b6650a40b3898b52dd2d61aa7c7bad729aeffed2`.
+- `src/components/medeus/MedeusStage.tsx` liquid mode defaults ON. URL `?surface=classic` immediately reverts to unaltered classic shader; zero additional visible buttons and no redesign of mobile keyboard/microphone/phonon.
+- QA: GitHub Actions `38291850459` **PASS** GLSL ES100 compilation, 10-state static gate, canonical Bun build, **6 unit tests PASS** (2 files). Initial failing run caught shader-reserved-word (product) and npm arborist installer failure (harness): both addressed. Latest QA workflow source commit `0a1675a1df7ec866116e4d3bf5c7c3d4908ca881`.
+- Lovable project `76dd8168-469d-4edb-88f6-f313be1c1de8` status `ready`, source sync observed at `b6650a40...`.
+- Liquid preview: `https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/`; classical fallback: same URL + `?surface=classic`.
+- `CODE_LIVE_SYNC=PASS`; `GLSL_COMPILE=PASS`; `SITE_BUILD=PASS`; `AUTOMATED_TESTS=6_PASS`; `USER_VISUAL_SIGNOFF=PENDING`; `MOBILE_GPU_REAL_DEVICE_CHECK=PENDING`.
+- Canon details [MEDEUS_LIVING_OCEAN_SURFACE_V1](docs/canon/MEDEUS_LIVING_OCEAN_SURFACE_V1.md). Do not claim physical fluid simulation or finalized visual appearance; this is a shader-based liquid optical membrane.
