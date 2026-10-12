@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np
 
 source = Path("research/audio/river-audition-v1/RIVER_C_ETHEREAL.mp3")
-target = Path("research/audio/river-audition-v2/RIVER_C_MINUS_100HZ_SOFT_SLOW.mp3")
+target = Path("research/audio/river-audition-v2/RIVER_C_MINUS_9HZ_SOFT_SLOW.mp3")
 target.parent.mkdir(parents=True, exist_ok=True)
 
 def run(*args):
@@ -34,16 +34,16 @@ for start in range(0, max(0,len(y)-win),320):
 if len(f0_values)<8:
     raise RuntimeError(f"Not enough voiced samples: {len(f0_values)}")
 f0=float(np.median(f0_values))
-# A literal 100-Hz fall is extremely deep for speech; keep nonzero pitch.
-new_f0=max(55.,f0-100.)
+# Small, natural voice-lowering from the original River C. Preserve vocal identity.
+new_f0=max(55.,f0-9.)
 ratio=new_f0/f0
 print(f"VOICE_C_SOURCE_MEDIAN_F0_HZ={f0:.1f}",flush=True)
-print(f"VOICE_C_REQUESTED_DOWN_HZ=100",flush=True)
+print(f"VOICE_C_REQUESTED_DOWN_HZ=9",flush=True)
 print(f"VOICE_C_EST_TARGET_MEDIAN_F0_HZ={new_f0:.1f}",flush=True)
 print(f"VOICE_C_APPLIED_F0_SHIFT_HZ={f0-new_f0:.1f}",flush=True)
 print(f"VOICE_C_PITCH_FACTOR={ratio:.5f}",flush=True)
 filter_chain=(
-    f"rubberband=pitch={ratio:.6f}:tempo=0.79:formant=preserved:transients=smooth:detector=soft,"
+    f"rubberband=pitch={ratio:.6f}:tempo=0.80:formant=preserved:transients=smooth:detector=soft,"
     "highpass=f=54,bass=g=2.5:f=170,"
     "equalizer=f=1150:t=q:w=1.0:g=0.8,"
     "treble=g=-3.2:f=4300,lowpass=f=7700,"
