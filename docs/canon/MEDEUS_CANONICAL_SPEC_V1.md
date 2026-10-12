@@ -2,6 +2,7 @@
 **Date:** 2026-10-12 · **Authority:** user-approved design requirements · **Status:** CANON_REQUIREMENTS_LOCKED / IMPLEMENTATION_UNVERIFIED.
 
 ## Product identity
+**Medium lock:** Browser-based one-page HTTPS **website**, NOT an installable/native mobile or desktop application. First accept interactions in a desktop browser, then make the same website responsive for phones.
 MEDEUS is an independent public-facing single-screen interface (desktop-first active implementation, mobile compatibility later) to probabilistic intelligence. It may later consume verified ASTRADELIA services, but is **not a ninth core block, a replacement for NOW, or a production-capable AGI**.
 
 ## Hard user constraints
