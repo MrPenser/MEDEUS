@@ -79,3 +79,9 @@ Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXAC
 - Implemented in Lovable-connected working GitHub repo, synced commit `6c92b87ca0dd69e8a1697e3e5e339871921b9f20`. Original hash unchanged. Source-orbit cleanup uses derived runtime canvas, not altered PNG.
 - Authority and QA: [MEDEUS_ORB_SOURCE_AND_SCALE_2026-10-12](docs/decisions/MEDEUS_ORB_SOURCE_AND_SCALE_2026-10-12.md).
 - `SOURCE_SYNC=PASS`; `ORB_ORIGIN_LOGIC=PATCHED`; `ORBIT_REMOVAL_HUMAN_VISUAL_PASS=PENDING`; `ORB_SCALE_HUMAN_VISUAL_PASS=PENDING`. Do not modify the provisionally approved 10 state shaders.
+
+## 2026-10-12 — Mobile website work explicitly activated by user
+- Later explicit user request `Адаптируй для мобильного` supersedes previous `MOBILE_DEFERRED` execution order. **ONE WEBSITE, responsive mobile adaptation**, not a native app. Desktop stays preserved as regression baseline.
+- Working source now branches by phone viewport and uses `mobile-field.ts` / `MedeusStage.tsx` for full-bleed portrait/landscape, centered orb, frameless native keyboard, microphone speech or keyboard fallback; emissions still originate from the orb.
+- Detailed contract/evidence: [MEDEUS_MOBILE_RESPONSIVE_PORT_2026-10-12](docs/decisions/MEDEUS_MOBILE_RESPONSIVE_PORT_2026-10-12.md).
+- `MOBILE_CODE_COMMITTED=true`; `LOVABLE_CODE_SYNC=PASS`; `MOBILE_HUMAN_VISUAL_SIGNOFF=PENDING`; `ANDROID_BROWSER_QA=PENDING`; `IOS_BROWSER_QA=PENDING`. Do not confuse preview READY with device pass.
