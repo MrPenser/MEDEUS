@@ -103,3 +103,9 @@ Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXAC
 - **Prepared, but not yet site-installed:** short ~4.5s (default) + extended ~7.4s greeting, processed original + gentle glass-pad re-synthesis around B-flat/D/F, mastering ~−17 LUFS, 48kHz/24-bit stereo, MP3 and WebM/Opus formats. The conversation delivers downloadable audio pack. No site binary upload claimed.
 - Authority / checksum / integration gate: [MEDEUS_GREETING_SOUND_DESIGN_V1](docs/canon/MEDEUS_GREETING_SOUND_DESIGN_V1.md).
 - Mobile browser autoplay before user interaction is unreliable or prohibited: implement one-time sound on first intentional orb/mic interaction (after user's approval), not autoplay claims. `AUDIO_RENDERED=PASS`; `SITE_AUDIO_UPLOAD=PENDING`; `CLIENT_PLAYBACK=PENDING`; `USER_SOUND_SIGNOFF=PENDING`.
+
+## 2026-10-12 — Greeting Audio V1 REJECTED; ASCENT V2 synthesized
+- Human review of earlier processed AMR: **quality unacceptable**, melodic pitches must move **strictly upward**, sound lacks depth. V1 **REJECTED/SUPERSEDED**. Do not promote or re-export V1.
+- Synthesized entirely new ascending sonic logo, no original AMR audio reused: seven progressively higher notes **B♭2–D3–F3–A3–C4–D4–F4**, sub-B♭ foundation, chime + resonant pad + diffuse stereo. 7.4s, 48kHz stereo WAV (~1.42MB).
+- Stored actual WAV in Lovable-connected website repository `MrPenser/medeus-master-asset/public/audio/medeus_ascent_deep_v2.wav` Git blob `94d6bd1ee4d57b969d41ae7a93f19c3ae258e299`. Preview-only listen/download gated behind `?soundDemo=1`; **normal site playback OFF** pending user signoff.
+- Canon and links: [MEDEUS_GREETING_SOUND_DESIGN_V2_ASCENT](docs/canon/MEDEUS_GREETING_SOUND_DESIGN_V2_ASCENT.md). GitHub-to-Lovable source sync commit `90e5de9e000060c6e5f61f298f1c68157facaf38` verified. `NEW_AUDIO_RENDERED=PASS`; `BROWSER_PLAYBACK_NOT_INDEPENDENTLY_TESTED`; `AUDIO_HUMAN_APPROVAL=PENDING`; `PRODUCTION_SOUND=DISABLED`.
