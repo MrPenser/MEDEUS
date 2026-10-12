@@ -29,3 +29,7 @@ MEDEUS is an independent public-facing single-screen interface (desktop-first ac
 **2026-10-12 sequencing override:** `DESKTOP_FIRST / MOBILE_DEFERRED_UNTIL_DESKTOP_APPROVAL`; this supersedes the old mobile-first build order but does not change the locked visual, interaction or final responsive requirements.
 
 Visual master and user-stated UX requirements are **LOCKED**. Version v6's motion/art direction and all motion gates remain **CANDIDATE_NOT_USER_ACCEPTED**. Changes to locked requirements require explicit user approval; no cosmetic reinvention.
+
+## Core's first phrase — newer user authority 2026-10-12
+- **For every visitor, the first sentence spoken by the core must mean «Добро пожаловать!» in the visitor's language.** No competing system introduction, forecast or answer precedes it as a spoken phrase. Natural localized examples: Russian «Добро пожаловать!», English “Welcome!”, Turkish “Hoş geldiniz!”. The language-resolution fallback and per-session playback constraints are defined in [MEDEUS_CORE_VOICE_IDENTITY_V1](MEDEUS_CORE_VOICE_IDENTITY_V1.md).
+- Spoken voice: a single coherent androgynous/dual-timbral identity, distinct from user speech recognition and provisional instrumental welcome. Sound playback after the first user gesture only; never claim all-language TTS where unavailable. `REQUIREMENT_LOCKED`, `TTS_IMPLEMENTATION_PENDING`.
