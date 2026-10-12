@@ -19,3 +19,9 @@ Working Lovable-synced source repo: `MrPenser/medeus-master-asset`.
 `CODE_SOURCE_SYNC=PASS`, `MIC_PHOTON_COORDINATES_CODE_PATH=PASS`, `TEN_STATE_SHADER_UNCHANGED=PASS`, `HUMAN_ORBIT_REMOVAL_VISUAL_VERDICT=PENDING`, `HUMAN_MAX_SAFE_ORB_SCALE_VERDICT=PENDING`, `END_TO_END_BROWSER_TEST=NOT_RUN`. Content-aware line interpolation may leave residual fine orbital traces; do not falsely declare all orbit artifacts eliminated without current browser screenshot/approval.
 
 Website: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app
+
+## Post-implementation orbit cleanup refinement
+- `a358bb34397eeb9505998abc663ff638a7e45161` — refined source-derived orbital cleanup to interpolate only the narrow, brighter line geometry and prevent broad darker bands across the nebula.
+- `Lovable.latest_commit_sha=a358bb34397eeb9505998abc663ff638a7e45161`, status `ready`, agent finished; readback of `orbit-cleanup.ts` contains selective prominence mask.
+- `orb-field.ts` blob `04fbf8a4432d55cdb964096b42949bb24a248643` verified unchanged.
+- `SOURCE_AND_DEPLOY_SYNC=PASS`. Visual clearance, residual thin guides and exact on-device mic-origin animation still require the user's real browser review.
