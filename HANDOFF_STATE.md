@@ -250,3 +250,13 @@ Apply inherited sequence: `CLOSED_VERIFIED → HANDOFF → ROADMAP/JOURNAL → S
 - Regression CI workflow commit `8fbec81e4bf4fcde927374971d615b12e0431d2f`, run `38295646821`: **GLSL ES100 PASS; ten organic state guards PASS; nonreversing ring guard PASS; Bun/Vite build PASS; existing tests PASS.** Product browser visual and mobile GPU smoothness NOT signed off.
 - User-facing trial https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/ ; hard rollback to unchanged original classical optics with `?surface=classic`. Full [canon](docs/canon/MEDEUS_LIVING_OCEAN_SURFACE_V1.md).
 - V1.2 `SOURCE_QA=PASS`; `BROWSER_VISUAL_APPROVAL=PENDING`; `FINAL_VISUAL_LOCK=FALSE`. Keep 10 existing core states; do not introduce a new state or AI character.
+
+
+## 2026-10-13 — LIQUID V1.3 organic resting breath
+- User explicitly APPROVED MEDEUS living liquid V1.2 ("хорошо оставляем"), but asked why the sphere does not breathe in idle. Cause: pre-V1.3 liquid surface shading/flow moved, but apparent orb contour remained constant radius.
+- Implemented a distinct **intrinsic idle volume breath** (NOT an eleventh FSM state) with changing rhythm and amplitude. Private source `MrPenser/medeus-master-asset`: `src/lib/medeus/breathing.ts` latest commit `1ddd4a002f90bf4ac9eca46fe5ac2e038b747a12`; `src/lib/medeus/orb-field.ts` commit `f841dd41ea2f3e5d41fa85884cdfd4b6b6838293`; `src/components/medeus/MedeusStage.tsx` commit `8c2d1d946c5c10e11517a011d0316e0da0ade675`.
+- Contour + UV refraction + spherical surface normals expand/contract by max ~2.6%, not simple texture brightness. Different successive cycles by noise modulation; disabled damping (30% amplitude) with reduced motion. Original master pixels, ten FSM states, liquid organic internals, hover and monotonic click ring unchanged.
+- Reversible **V1.2 liquid** `?breath=off`, **original classic sphere** `?surface=classic`. V1.3 default `https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/`.
+- Crucial product-vs-test distinction: first QA caught nearly repeating consecutive waves in NEW breath unit tests despite shader/build passing; changed breath phase variation rather than loosening test.
+- Final CI workflow `8dafcf887478cca53f48b4a24df89dac59c2854c`, GitHub Actions run `38348454805`: `SHADER_GLSL_ES100=PASS`, `BUN_VITE_BUILD=PASS`, `ALL_AUTOMATED_TESTS=PASS`, `BREATH_NONREPETITION=PASS`. Visual/device sign-off remains PENDING (do not call it approved).
+- Complete inheritance/canon: [MEDEUS_LIVING_OCEAN_SURFACE_V1](docs/canon/MEDEUS_LIVING_OCEAN_SURFACE_V1.md).
