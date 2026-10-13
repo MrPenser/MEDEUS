@@ -193,3 +193,21 @@ Immutable verified master bitmap, ten canonical FSM states, one-way touch ring, 
 **Invariant and acceptance:** original master `MEDEUS_MASTER_VISUAL_V1_LOCKED.png`, SHA256 `52244e15720d0dd40faa04914a44f8051a6466c166973b2609ea5d58f0e1de88`, remains byte-identical. Cleans an ephemeral presentation copy, not asset. Ten canonical states and existing mobile layout preserved. Real user browser **NO_ORBITS_VISUAL_ACCEPTANCE=PENDING**, device screenshot QA not independently performed; source tests prove modeled geometry only, not all possible unmodeled raster marks.
 
 **Preview:** https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/ . Bypass stale cached page with Ctrl+F5. Classic `?surface=classic` still allows comparing original sphere optical surface **but now also receives orbital-cleaned background**, i.e. classic is not an orbital rollback.
+
+
+## 2026-10-13 — MEDEUS V3: exact approved image, no microphone captions
+**Request and consent:** User visually approved a newly generated MEDEUS cosmic-vortex image after asking to remove the inscriptions above the microphone, then explicitly ordered "внедряй". The newly generated file from the current conversation is the *direct source* of V3, not a recreated artwork or an approximate text overlay.
+
+**Immutable image identity:**
+- Source: user-approved generated `космический_вихрь_medeus.png` (2026-10-13).
+- Final GitHub site asset: `MrPenser/medeus-master-asset/src/assets/MEDEUS_MASTER_VISUAL_V3_NO_CAPTIONS.png`.
+- Real original byte SHA256 = `9aac52baeac03d61a35ea9809d3580128952de1ae14d77f43c97a5fb7585c50d`, 2,218,455 bytes, PNG RGB 1672x941.
+- Git blob SHA = `40620e1238b7c6ab2098c8f3c9d6c12e0d4899c6`; adding binary asset via Git-tree commit `f610cff5322b4c6e2445243e493f733e751aaa27`.
+- `src/lib/medeus/asset.ts` commit `130f474b9e27d976db440ada7b9afeba5fe40d95`: renders V3 by default, runtime SHA256 verification switched to exact V3 hash, V1 and V2 retained as backups (V2 SHA256 `0dd41f6c5f1381136920480e23a3c9389604834a331e6b8bcfd4e22480f5b2ba`).
+- `src/lib/medeus/presentation.ts` commit `93109509eb377b6bde6be75df209f05304914cba`: identity presentation, no old captions or masks, orb center 836,403 and radius 224; baked microphone center 836,810; full aspect 1672x941 maintained for desktop/mobile and WebGL.
+- `src/lib/medeus/master-v2.test.ts` commit `79e3676ad9c73f83561a5c744514a85903697b31`: verified V3 full binary SHA256 + IHDR dimensions, V2 backup unchanged, original 10-state FSM, all UI target bounds.
+- `.github/workflows/medeus-liquid-orb-qa.yml` commit `1120511e783818fb2731874d6a4740ed74a0d144`: asserts exact V3 PNG bytes, V2 backup bytes, WebGL shader, ten FSM state guards and site build.
+
+**Verification:** GitHub Actions run `38362174590`: shader/GLSL ES 1.00 PASS; Bun/Vite production build PASS; **29/29 unit tests PASS** across 7 test suites, includes SHA256 of installed PNG and preserved backup. Lovable source check: asset.ts imports V3 and correct SHA, project status ready, Lovable project file inventory confirms V3 PNG binary exists alongside V2. Direct preview: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/ .
+
+**Product gate:** SITE_SOURCE_QA=PASS; APP_PREVIEW_AVAILABLE=TRUE; USER_BROWSER_VISUAL_SIGNOFF_ON_DEPLOYED_V3=PENDING. Do not alter ten canonical FSM states, liquid-water interaction, independent breathing and user-controlled microphone, and never revert to rejected orbits/crystal dashes.
