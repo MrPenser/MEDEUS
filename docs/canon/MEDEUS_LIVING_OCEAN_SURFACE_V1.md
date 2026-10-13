@@ -151,3 +151,24 @@ Immutable verified master bitmap, ten canonical FSM states, one-way touch ring, 
 - V1.5 pox rejected; DO NOT enable without new user visual approval.
 - V1.6 experiments default OFF; USER_VISUAL_SIGNOFF=NOT_GRANTED, REAL_BROWSER_PERCEPTION=UNVERIFIED.
 - Preserve V1.3 liquid breathing, V1.2 one-way touch ripple and viscosity hover, and all ten original states; no new surface ornaments or geometrical repetitions; master SHA stays locked.
+
+
+## 2026-10-13 — Living Ocean V1.7: rare crystal-clear interior flashes
+**Authorized user request:** after visually rejecting V1.5 star freckles/pox and V1.6 invisible distant stars, user chose instead *редкие кристально чистые всполохи без тумана и мутностей* and explicitly ordered autonomous implementation (*исполняй сама*).
+
+**Architectural decision:** close the star-particle rendering path entirely: no circles, sprite alpha textures, 256px star lightmap, texture uploads, permanent specks, ambient fog or haze. Preserve the confirmed visually approved living ocean baseline (breathing, cursor traction, physical one-way ring) as the default; experimental crystalline event is opt-in only via ?light=crystal pending user visual signoff.
+
+**Production changes, GitHub site repo MrPenser/medeus-master-asset:**
+- src/lib/medeus/crystal-flashes.ts commit aa302d4c36ccbbe3dfeede5cce798e5f775de7a8: event-driven **at most one active crystalline flash**, irregular first glimpse at +1.8…3.4s, further independent arrivals every 5.5…11.5s after completion, event duration 0.48…0.94s, randomized position (radius <=0.43), angle, half-length (0.033…0.070 radii), width (0.0032…0.0052 radii), depth, intensity. Smooth brief birth/death envelope; no repeating particles/orbits/geometry. Optional reduced-motion dims to 37%. No new state; 10-state current visual intensities act only as modulation.
+- src/lib/medeus/orb-field.ts commit f343872bbf081ed3c012404dc6b76cff9f3ed204: remove runtime imports, shaders, GPU textures/uploads and additive star specks entirely. Render single **crisp, tapered luminous sliver** analytically in GLSL ES100 with uCrystal/uCrystalShape, calculated from **pBelow** (same underwater refraction as existing ocean), depth shell exclusion beyond ~0.45 to .65 radius, no translucent circular halo, mist, noise field or glow sprite. Apply beneath original approved outer water Fresnel/sheen. No additional GPU texture cost.
+- src/components/medeus/MedeusStage.tsx commit 5098877980aaa57d0ec765a7b36d9d5241059ac3: remove stars=deep UI/preview activation; enable **crystal flashes only with ?light=crystal**. Default root remains accepted living V1.3 with no extra light objects; classic restoration still ?surface=classic.
+- src/lib/medeus/crystal-flashes.test.ts commit c27cef933bd2d4d99880d87866b175e340e4d127: five deterministic tests verifying startup visibility, rare placement/temporal independence, no permanent spots, motion reduction and state-level modulation only.
+- Regression workflow .github/workflows/medeus-liquid-orb-qa.yml commit a1abc08480dc6f4a45c3bcc772586333fd79eebf: explicit static assertions prohibit uStarTex/MicroStarField/star-lightmap path returning, protect submerged pBelow coordinates, interior-only envelope and opt-in starless default. GitHub Actions **38354547301** shader GLSL ES100 PASS, Bun/Vite production build PASS, all **21/21 tests PASS** (5 files).
+- Lovable project 76dd8168-469d-4edb-88f6-f313be1c1de8 reported ready and matching latest site commit a1abc08480dc6f4a45c3bcc772586333fd79eebf. Read-file probes confirmed live stage uses light=crystal opt-in, orb-field lacks star texture and imports the new event system, dedicated event module is synchronized.
+
+**Visual QA boundary:** user has NOT yet approved V1.7. No browser-level perceptual test claimed. V1.7 is a controlled experiment; base accepted ocean remains official. Master image (immutable SHA256 52244e15720d0dd40faa04914a44f8051a6466c166973b2609ea5d58f0e1de88), ten-state FSM and original classic renderer remain unmodified.
+
+**URLs:**
+- Crystal experiment: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?light=crystal
+- Approved base without light events: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/
+- Original classical sphere: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?surface=classic
