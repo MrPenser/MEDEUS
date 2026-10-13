@@ -111,3 +111,20 @@ Links:
 - Approved V1.3 liquid + breathing, no stars: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?stars=off
 - V1.2 liquid with breathing/stars disabled: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?stars=off&breath=off
 - Historical classic: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?surface=classic
+
+
+## 2026-10-13 — V1.5: micro-stars visibility recovery
+**User visual QA:** V1.4 received direct feedback: "пока ничего не видно" — no visible stars. This is a true product perceptual defect, distinct from the previously passing shader/build harness checks.
+
+**Code diagnosis:** some star cores were only ~0.55px at 256px lightmap resolution; after alpha painting, alpha multiplication in the fragment shader, star-state gain 0.33 for idle, and complex existing galaxy pixels, emissions could be imperceptible. This explains likely faintness, but is not yet validated in the user's browser.
+
+**Implementation directly in website repo MrPenser/medeus-master-asset:**
+- src/lib/medeus/micro-stars.ts commit 39c565fe9851f71bcb98a8a4c04fb192fdf04c21. Exactly 14 sparse stars remain; random sizes increased to a clear minimum ~1.75px reference core with painted bright-dot radius >=1.19 lightmap px, larger translucent halo, brighter independent life and birth flashes, asynchronous start ages. Idle DORMANT illumination gain raised 0.33 -> 0.80; ERROR_SILENCE stays nearly dark. No uniform orbits, grids or identical cycles.
+- src/lib/medeus/orb-field.ts commit 6caf412ba9e6613decc741a3a65b994c318b2222. Underwater additive emissive signal corrected: stellarEmission = micro.rgb * (micro.a * 2.6) * uStarGain * depthFade. Star coordinates still use pBelow from liquid refraction; stellar light is composited BEFORE the liquid sheen, and never overlays HUD. Stars-off and classic variants unaffected.
+- CI visibility guards commit 4f5a1c2bfdb404c289fb678753eeea1c5c33990a.
+- src/lib/medeus/micro-stars.test.ts commit 355de90d284cfa88feefe0413063e96f1f81e076: additional deterministic raster test verifies several painted stellar cores with visible >=1.19px radii and bright halo stops while keeping population small.
+- GitHub Actions run 38350464654: GLSL ES100 shader gate PASS, Bun Vite production build PASS, full test suite PASS. Visual perception on user hardware and real-device GPU performance are PENDING — automated test success is not user visual acceptance.
+
+**A/B:** V1.5 default with micro-stars: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/ ; approved V1.3 without stars: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?stars=off
+
+Immutable verified master bitmap, ten canonical FSM states, one-way touch ring, hover, autonomous breathing and voice/keyboard remain unchanged.
