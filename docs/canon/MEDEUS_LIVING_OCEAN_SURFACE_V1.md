@@ -72,3 +72,21 @@ User explicitly rejected the humanoid/druid face ("пока откажемся �
 **Custody:** immutable master `MEDEUS_MASTER_VISUAL_V1_LOCKED.png` SHA256 `52244e15720d0dd40faa04914a44f8051a6466c166973b2609ea5d58f0e1de88`; untouched. Canonical **ten FSM states** still `DORMANT, AWARE, LISTENING, RECEIVING_TEXT, PROCESSING, EMITTING, MATERIALIZING, REVEALED, DEEPENING, ERROR_SILENCE`. No eleventh state; visual process is not a new agent.
 
 **Preview** https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/ ; rollback https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?surface=classic ; mobile visual-performance and user acceptance are **not automatically proven** by shader compilation/build tests.
+
+
+## 2026-10-13 — Living Ocean V1.3: intrinsic nonrepeating breathing
+**User visual sign-off:** V1.2 accepted ("хорошо оставляем"); user then asked why sphere does not breathe by itself.
+
+**Cause:** The liquid V1.2 shell only had moving underwater UV flow and surface normals plus click/hover deformation. Its **sphere silhouette/physical apparent volume remained at radius 1.0** at rest, so motion resembled a stationary vessel with moving liquid rather than a living inhaling/exhaling ocean.
+
+**V1.3 implementation in private website repo `MrPenser/medeus-master-asset`:**
+- Pure CPU animation function `src/lib/medeus/breathing.ts`, initial commit `0712505c27d35fbeae8dd4ae8bf3e29041eb6b1b`, corrected stronger phase decorrelation commit `1ddd4a002f90bf4ac9eca46fe5ac2e038b747a12`. Phase and strength vary by smoothed deterministic noise; default radius oscillations within about ±2.6%; reduced-motion amplitude 30%. Unlike a uniform sine oscillator, consecutive cycles differ naturally.
+- `src/lib/medeus/orb-field.ts` commit `f841dd41ea2f3e5d41fa85884cdfd4b6b6838293` adds `uBreath` to liquid sphere **contour**, underwater-image UV scale and spherical-cap surface normals, to make the sphere itself expand/contract organically. Enlarges transparent WebGL canvas margin `ORB_BOX` from 1.04 to 1.09 to avoid clipping during inhale + hover tug; immutable bitmap and its geometry remain unchanged.
+- `src/components/medeus/MedeusStage.tsx` commit `8c2d1d946c5c10e11517a011d0316e0da0ade675` passes the time-animated breathe parameter; **on by default**. Switch `?breath=off` returns the user-accepted **V1.2 liquid** behavior, while `?surface=classic` returns original classical clean sphere; no new visible controls.
+- Unit tests `src/lib/medeus/breathing.test.ts` check real radius modulation, amplitude bounds, nonidentical consecutive cycles, reduced motion. First run detected too-similar cycles; amended phase variation rather than weakening test. New CI triggers on breath source and tests, regression checks for sphere contour + underwater scale, commit `8dafcf887478cca53f48b4a24df89dac59c2854c`.
+- **Acceptance boundaries:** ten FSM states and their V1.2 organic rendering unchanged; one-way click ring and hover attraction unchanged; frozen source master not edited. Visual acceptance of V1.3 and real-mobile performance **PENDING** until direct inspection. This is a WebGL optical breathing effect, not a physically simulated ocean.
+
+Links:
+- V1.3 default: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/
+- V1.2 liquid with breathing off: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?breath=off
+- Historical classic sphere: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?surface=classic
