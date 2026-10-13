@@ -189,3 +189,11 @@ Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXAC
 - Crucial product-vs-test distinction: first QA caught nearly repeating consecutive waves in NEW breath unit tests despite shader/build passing; changed breath phase variation rather than loosening test.
 - Final CI workflow `8dafcf887478cca53f48b4a24df89dac59c2854c`, GitHub Actions run `38348454805`: `SHADER_GLSL_ES100=PASS`, `BUN_VITE_BUILD=PASS`, `ALL_AUTOMATED_TESTS=PASS`, `BREATH_NONREPETITION=PASS`. Visual/device sign-off remains PENDING (do not call it approved).
 - Complete inheritance/canon: [MEDEUS_LIVING_OCEAN_SURFACE_V1](docs/canon/MEDEUS_LIVING_OCEAN_SURFACE_V1.md).
+
+
+## 2026-10-13 — MEDEUS Living Ocean V1.4: internal micro-star lifecycles
+- User approved V1.3 breathing ocean, then explicitly authorized sparse **submerged micro-stars** with autonomous asynchronous birth, slow random drift, dimming/death, rebirth elsewhere. No static particle wallpaper, no equal trajectories, no repeating triangles, no additional FSM state.
+- Production code commits in private MrPenser/medeus-master-asset: src/lib/medeus/micro-stars.ts e7daf916538fc09415493e46c0a422125a26944e (14 independent stars with individualized 11–31s lives); src/lib/medeus/orb-field.ts 13796cbf704d4b7497fa58f17142c312afa32f5d (refracted under-liquid 256px lightmap, throttled 80ms, one texture sample, before outer sheen); src/components/medeus/MedeusStage.tsx 482289de7a91d076bf68587a0d32e8ca75b1ff3e (on by default, reversible ?stars=off); src/lib/medeus/micro-stars.test.ts 69ee4ebd5ba0b03ea835a6a4fb260c3ea85c31d3.
+- Regression CI workflow commit ee2d658a9f9d4c490467d6e171ef207abf5dd244, Actions run **38349765671**: **shader GLSL ES100 PASS**, **site Bun/Vite build PASS**, **15/15 unit tests PASS** (includes five star tests). Previous code-only run 38349716794 also PASS 15/15.
+- Lovable preview READY and synced: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/. Baseline V1.3 accepted and directly preserved with ?stars=off; ?surface=classic restores historical clean sphere; asset SHA and existing 10 states unchanged.
+- Detailed canon: [MEDEUS_LIVING_OCEAN_SURFACE_V1](docs/canon/MEDEUS_LIVING_OCEAN_SURFACE_V1.md). **User acceptance V1.4 = PENDING; real mobile GPU visual QA = PENDING**, do not equate shader/build verification with visual acceptance.
