@@ -197,3 +197,14 @@ Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXAC
 - Regression CI workflow commit ee2d658a9f9d4c490467d6e171ef207abf5dd244, Actions run **38349765671**: **shader GLSL ES100 PASS**, **site Bun/Vite build PASS**, **15/15 unit tests PASS** (includes five star tests). Previous code-only run 38349716794 also PASS 15/15.
 - Lovable preview READY and synced: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/. Baseline V1.3 accepted and directly preserved with ?stars=off; ?surface=classic restores historical clean sphere; asset SHA and existing 10 states unchanged.
 - Detailed canon: [MEDEUS_LIVING_OCEAN_SURFACE_V1](docs/canon/MEDEUS_LIVING_OCEAN_SURFACE_V1.md). **User acceptance V1.4 = PENDING; real mobile GPU visual QA = PENDING**, do not equate shader/build verification with visual acceptance.
+
+
+## 2026-10-13 — Living Ocean V1.5 micro-star visibility recovery
+- Real user review of V1.4: "пока ничего не видно" (micro-stars imperceptible). Explicitly rejected star visibility, despite prior production source + GLSL and unit tests passing. This is PRODUCT visual feedback, not a harness failure.
+- ROOT CAUSE supported by code inspection: 256px lightmap stars used 0.55px cores, then accumulated painted alpha + shader alpha + idle gain 0.33; final luminous pixels could vanish against original busy orb.
+- Direct source V1.5 remediation, private `MrPenser/medeus-master-asset`: `src/lib/medeus/micro-stars.ts` commit `39c565fe9851f71bcb98a8a4c04fb192fdf04c21` boosts individual halo/stellar light/core size with no count increase (14); idle gain 0.80; `src/lib/medeus/orb-field.ts` commit `6caf412ba9e6613decc741a3a65b994c318b2222` upgrades underwater emission compositing 2.6x, with same liquid refraction coordinates and pre-surface sheen layering.
+- Added minimum visible core size / idle emissive gate to CI commit `4f5a1c2bfdb404c289fb678753eeea1c5c33990a`, and deterministic raster painter test in `src/lib/medeus/micro-stars.test.ts` commit `355de90d284cfa88feefe0413063e96f1f81e076`.
+- CI run `38350464654`: `GLSL_ES100_PASS`, `BUN_VITE_BUILD_PASS`, `16/16_AUTOMATED_TESTS_PASS` (including 6 star tests). Lovable project `76dd8168-469d-4edb-88f6-f313be1c1de8` status ready, synced through `355de90d...`.
+- Current preview: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/ ; accepted V1.3 baseline `?stars=off`; original classic `?surface=classic`.
+- `USER_VISUAL_APPROVAL_V1_5=PENDING`: do not label stars as visually successful until the user observes them. Retain 10 FSM, one-way click, hover, V1.3 breathing, immutable master asset hash.
+- Full details [MEDEUS_LIVING_OCEAN_SURFACE_V1](docs/canon/MEDEUS_LIVING_OCEAN_SURFACE_V1.md).
