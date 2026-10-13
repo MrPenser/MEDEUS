@@ -128,3 +128,26 @@ Links:
 **A/B:** V1.5 default with micro-stars: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/ ; approved V1.3 without stars: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?stars=off
 
 Immutable verified master bitmap, ten canonical FSM states, one-way touch ring, hover, autonomous breathing and voice/keyboard remain unchanged.
+
+
+## 2026-10-13 — V1.6: user rejects star freckles, approved liquid restored
+
+**User visual feedback on V1.5:** "нет!!! это как оспа на теле океана" — visible dots were perceived as surface skin blemishes rather than distant stellar births. This is an explicit **REJECTED_VISUAL**, overriding earlier automated shader/test PASS. Increasing brightness/size was the wrong corrective action. Do not quietly restore that design.
+
+**Immediate protective rollback**: website repo MrPenser/medeus-master-asset, src/components/medeus/MedeusStage.tsx commit 5f8130572602cecc3fefc304a31931b0967f62e6, changes default from stars-on to **stars OFF**. Experimental effect must be expressly requested as ?stars=deep. Default preview is again the previously accepted V1.3 **living, breathing, pointer-responsive, outward-ripple ocean with NO starspots**. No base shader, ten-state FSM or immutable verified master alteration was required for the rollback. Lovable ready and source-sync confirmed at rollback SHA 5f813057....
+
+**Separate visual research, V1.6 deep-only opt-in**:
+- src/lib/medeus/micro-stars.ts commit 6b9ffac672635c784781c9294d61e225a17010a3: only **10** stars (down from 14), now restricted to inner radial <=0.59 in orb units, small <=1px reference pinprick centres, very weak 3–5px halo, dimmer cool/lilac emission, randomized depth/lifetime/slow drift, asynchronous birth-death and respawn. Do NOT render large sharp/ringed glowing spots.
+- src/lib/medeus/orb-field.ts commit d4caa35f3f8202dba61c3bdafdc78314d5c7827a: remove 2.6× pox-emission mode, implement much softer 1.45× under-water luminescence multiplied by inner-ocean envelope, explicit outer-shell exclusion and background cloud occlusion. Still uses refracted underwater pBelow coordinates before fluid sheen.
+- src/lib/medeus/micro-stars.test.ts commit cf34cf7eb4b18b1a76174b03b0ab69e1c151479c: raster regression test asserts sparse <=10 population, sub-1px source cores, max 4.9px halos, positional restriction to deep core.
+- .github/workflows/medeus-liquid-orb-qa.yml commit 1def24ff3bd9b0487a6a4cfe1b6d45a13c092dc1: default star-off hard gate, ?stars=deep opt-in, deep occlusion and no cosmetic freckles. Source CI run **38351217510**: WebGL1 GLSL compile PASS, Bun/Vite build PASS, 16/16 unit tests PASS in 4 files. Several intermediate runs failed due to stale old CI assertions; final source/run passed. Do not label those harness transitional failures as product regressions.
+
+**Preview split (non-destructive):**
+- DEFAULT / accepted **starless ocean**: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/
+- OPTIONAL / unapproved deep micro-star experiment: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?stars=deep
+- Classic full rollback: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?surface=classic
+
+**Hard constraints:**
+- V1.5 pox rejected; DO NOT enable without new user visual approval.
+- V1.6 experiments default OFF; USER_VISUAL_SIGNOFF=NOT_GRANTED, REAL_BROWSER_PERCEPTION=UNVERIFIED.
+- Preserve V1.3 liquid breathing, V1.2 one-way touch ripple and viscosity hover, and all ten original states; no new surface ornaments or geometrical repetitions; master SHA stays locked.
