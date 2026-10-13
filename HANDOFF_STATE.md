@@ -462,3 +462,9 @@ Apply inherited sequence: `CLOSED_VERIFIED → HANDOFF → ROADMAP/JOURNAL → S
 - Final source HEAD `8d8dec4b0f0f542e7f13a42784d45993c86c872a`: GitHub Actions `38424331561` complete SUCCESS — both shader programs GLSL ES100 PASS, production build PASS, 58/58 tests PASS (10 suites). Lovable project `76dd8168-469d-4edb-88f6-f313be1c1de8` `ready` and independently synced at exact same commit SHA.
 - [MEDEUS V3.9.4 lilac orb](docs/canon/MEDEUS_V3_9_4_LILAC_ORB_COLOR_2026-10-13.md). Preview https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/ . Immutable V3 master SHA256 `9aac52baeac03d61a35ea9809d3580128952de1ae14d77f43c97a5fb7585c50d` unchanged.
 - `SOURCE_QA=PASS`, `LOVABLE_SYNC=PASS`, `USER_LILAC_COLOR_VISUAL_SIGNOFF=PENDING`, `MOBILE_REAL_GPU_QA=PENDING`, `STAGE_COMPLETE=FALSE`. Do not infer visual approval from CI.
+
+## 2026-10-13 — V3.9.6 Dark lilac body with bright inner emitter
+- Owner required dark sphere illuminated from inside; user authorized direct edit ("Сам"). EXTEND V3.9.5 internal glow. Code-only dark palette and stronger volumetric emission in src/lib/medeus/orb-field.ts (website commit 57a4b11c7ee55095043a8db6e2067bb3fdb5c016). Preserve zero rotation, existing water, breath, hover, click, original mic and all mobile layout/fixes.
+- Website HEAD de68f2f44e2487e6196a6f76bb6b7f47aac7c5b8; GitHub Actions 38428240191 SUCCESS, GLSL ES100 and Vite PASS, 59/59 unit tests PASS. Lovable project 76dd8168-469d-4edb-88f6-f313be1c1de8 exact same mirrored SHA and ready.
+- Canon: docs/canon/MEDEUS_V3_9_6_DARK_SPHERE_INNER_LIGHT.md; preview https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/ . Locked V3 source SHA256 9aac52baeac03d61a35ea9809d3580128952de1ae14d77f43c97a5fb7585c50d unchanged.
+- SOURCE_QA=PASS; LOVABLE_SYNC=PASS; USER_VISUAL_ACCEPTANCE=PENDING; STAGE_COMPLETE=FALSE.
