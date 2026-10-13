@@ -90,3 +90,24 @@ Links:
 - V1.3 default: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/
 - V1.2 liquid with breathing off: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?breath=off
 - Historical classic sphere: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?surface=classic
+
+
+## 2026-10-13 — Living Ocean V1.4: submerged micro-stars
+**User approval / intent:** user approved living V1.3 breathing and explicitly requested sparse, chaotic, internally submerged micro-stars with individual lives, births, deaths and motion. User then authorized direct implementation ("делай сама", "даю разрешение").
+
+**Implemented directly in private website repo** MrPenser/medeus-master-asset:
+- src/lib/medeus/micro-stars.ts — commit e7daf916538fc09415493e46c0a422125a26944e. Exactly 14 asynchronous lifecycled light points, randomized x/y/depth/lifetime (11–31s), no regular orbit or grid, slow redirected random drift, continuous independent birth/brightening/extinguishing and rebirth at a different location. Sizes, temperatures and halo strengths differ. Not all are simultaneously visible.
+- src/lib/medeus/orb-field.ts — commit 13796cbf704d4b7497fa58f17142c312afa32f5d. CPU paints a transparent 256×256 star lightmap, uploads at most once every 80ms (12.5fps), shader samples one star texture at *refracted underwater coordinate pBelow* before outer liquid Fresnel/sheen. This is an embedded star-depth layer, not a fixed HUD or UI overlay. No per-pixel nested star loop. Optional star-lightmap failure must not blank main sphere.
+- src/components/medeus/MedeusStage.tsx — commit 482289de7a91d076bf68587a0d32e8ca75b1ff3e. Stars on by default only in liquid mode; ?stars=off restores approved breathing V1.3; ?surface=classic remains exact historical opt-out. The user-facing control layout is unchanged.
+- src/lib/medeus/micro-stars.test.ts — commit 69ee4ebd5ba0b03ea835a6a4fb260c3ea85c31d3; five deterministic unit tests: sparse random population, asynchronous birth/death, slow drift and new positions, ten-state illumination only, reduced-motion support.
+- CI workflow .github/workflows/medeus-liquid-orb-qa.yml updated at ee2d658a9f9d4c490467d6e171ef207abf5dd244 to gate lightmap internals, 0.08s upload throttle, state preservation, classic rollback and stars-off toggle.
+
+**Immutable custody:** verified master asset SHA256 52244e15720d0dd40faa04914a44f8051a6466c166973b2609ea5d58f0e1de88 unchanged. All ten FSM states, V1.2 one-way click ring, hover attraction, V1.3 irregular breathing unchanged. A micro-star lifecycle is **not** an eleventh cognitive state.
+
+**Verification:** source commit 482289de7a91d076bf68587a0d32e8ca75b1ff3e, GitHub Actions run 38349716794: shader GLSL ES100 PASS; Bun/Vite build PASS; all 15 tests PASS (4 suites). Enhanced QA run 38349765671 was initiated on workflow commit ee2d658..., pending separate final confirmation. Lovable project reported ready, synced to workflow commit ee2d658.... User visual acceptance and real-device GPU performance remain **PENDING**.
+
+**Runtime trials:**
+- V1.4 liquid + breath + submerged microstars: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/
+- Approved V1.3 liquid + breathing, no stars: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?stars=off
+- V1.2 liquid with breathing/stars disabled: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?stars=off&breath=off
+- Historical classic: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?surface=classic
