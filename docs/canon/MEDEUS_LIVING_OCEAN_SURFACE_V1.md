@@ -172,3 +172,24 @@ Immutable verified master bitmap, ten canonical FSM states, one-way touch ring, 
 - Crystal experiment: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?light=crystal
 - Approved base without light events: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/
 - Original classical sphere: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/?surface=classic
+
+
+## 2026-10-13 — V1.8: NO ORBITS, NO CRYSTAL LINES
+
+**Visual user verdict:** user explicitly REJECTED experimental thin crystal flashes ("ерунда какието просто ооочень редкие черточки") and commanded "убери в конце концов все орбитыыы!!!". Previous V1.7 is NOT accepted. No further star/crystal decorative attempts should be deployed without user approval. Approved baseline remains breathing water, pointer magnetic drag, click's outward-only ring, ten original states.
+
+**Root cause of persistent orbits:** six orbit ellipses plus horizontal scaffold/guide beads are baked into the immutable verified original panorama. The prior `src/lib/medeus/orbit-cleanup.ts` cleanup used limited ring-width coverage and a luminance prominence condition; dull arc segments and crossings (sampling other parts of the same guide) survived. Merely removing WebGL orbit code does not remove these raster lines.
+
+**Actual source fixes in private website repo `MrPenser/medeus-master-asset`:**
+- `src/lib/medeus/orbit-cleanup.ts` commit `8676896b62f5170ccfe42249258ba121c75cf9cf`: replace brightness-gated orbital suppression with a geometry-complete mask for 6 source-defined ellipse guides, continuous horizontal beam and 4 decorative nodes, rebuilding affected pixels from nearby **unmasked original cosmic donor pixels** along each line normal. Protected approved orb interior and immutable original pixels never touched. One in-memory derivative on load, shared across desktop and mobile.
+- Follow-up real product bug found by new unit tests: at intersections the normal could sample still-on-beam pixels; commit `6bc3c8b16b74f939c98e8be8ed3ac15d61c9928f` prioritizes perpendicular donor sampling for horizontal-beam crossings.
+- Orb rim node x944,415 fell inside former protected radius and remained; commit `b6b45855403d3a43b716c981a4eb8d3204444a5d` supports removing rim ornament within the WebGL-transparent edge while protecting true inner orb.
+- `src/lib/medeus/orb-field.ts` commit `8741bf9c87868d2ee3b288c6bc7f4914776c949b`: remove rejected crystalline GLSL lines/related uniforms and renderer invocation; no star textures or particle logic. Ten organic state shader and approved breathing/hover/contact optical equations unchanged.
+- `src/components/medeus/MedeusStage.tsx` commit `99939e9a8b3a24e122d72ce79580294671e8a8c7`: eliminate `?light=crystal` runtime activation and debug state. Current default and former experiments now show the accepted clean liquid visual.
+- New `src/lib/medeus/orbit-cleanup.test.ts` commit `48c1acd28f30e24d46afcac892ce0f9f868c1d80`: three tests, including synthetic full-size master frame with bright/dim ellipse tracings, beam/nodes, orb pixel-preservation and reject malformed data. A real product defect was detected and corrected; the tests remained strict, not weakened to hide defects.
+- `.github/workflows/medeus-liquid-orb-qa.yml` commit `eb1e58e477c836fb61e3070f4d8ca066b2aaed23` asserts no star/crystal renderer, checks in-memory orbit cleanup used by the presentation and desktop/mobile painting paths, preserves all ten state guards, outward-only wave and breathing. Earlier workflow red was caused by a brittle regex assertion and real orbit crossing bugs; final passed.
+- **Final GitHub Actions run `38355671430` for website source commit `b6b45855403d3a43b716c981a4eb8d3204444a5d`: shader GLSL ES100 PASS, Bun Vite production build PASS, **24/24 tests PASS (6 suites)**, including 3 new orbit tests. Lovable project `76dd8168-469d-4edb-88f6-f313be1c1de8` confirmed `ready` and exact commit synced.
+
+**Invariant and acceptance:** original master `MEDEUS_MASTER_VISUAL_V1_LOCKED.png`, SHA256 `52244e15720d0dd40faa04914a44f8051a6466c166973b2609ea5d58f0e1de88`, remains byte-identical. Cleans an ephemeral presentation copy, not asset. Ten canonical states and existing mobile layout preserved. Real user browser **NO_ORBITS_VISUAL_ACCEPTANCE=PENDING**, device screenshot QA not independently performed; source tests prove modeled geometry only, not all possible unmodeled raster marks.
+
+**Preview:** https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/ . Bypass stale cached page with Ctrl+F5. Classic `?surface=classic` still allows comparing original sphere optical surface **but now also receives orbital-cleaned background**, i.e. classic is not an orbital rollback.
