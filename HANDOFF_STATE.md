@@ -504,3 +504,12 @@ Apply inherited sequence: `CLOSED_VERIFIED → HANDOFF → ROADMAP/JOURNAL → S
 - Master V4 PNG SHA256 `773f67be7fea7fb8b3dd63b88f58dd55d01e82b0724ed3098db317a8d4f8d5b6` unmodified, V3 backup, 10 FSM, mic and voice/text, responsive layout intact. No public publishing.
 - Detailed canon: [V5 live star](docs/canon/MEDEUS_V5_LIVE_STELLAR_CONVECTION_CORONA_2026-10-14.md); preview https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/.
 - `SOURCE_QA=PASS`, `USER_VISUAL_SIGNOFF=PENDING`, `REAL_DESKTOP_MOBILE_QA=PENDING`, `STAGE_COMPLETE=FALSE`. Lovable matching SHA must be independently verified; GitHub CI does not guarantee aesthetic realism.
+
+
+## 2026-10-14 — V5.1 eight-direction active stellar corona
+- Owner feedback V5 is improved but corona must be **more active** and produce independently animated prominences at **ALL** positions (upper/lower/lateral/diagonals); user explicitly authorized direct changes. `RECALL_DISPOSITION=EXTEND_V5_CORONA_ONLY`, previous V5 internal stellar convection is retained.
+- Website `MrPenser/medeus-master-asset`: `src/lib/medeus/orb-field.ts` commit `27e3cb2d43e80fc3ffc8d2ee3c3cf7cb85de2e3c` extends corona to eight non-synchronous compass/diagonal prominence sectors, layered moving billows/filaments and dynamically changing reach up to ~0.335 radii. Outer region clip .35, `ORB_BOX=1.43` preserves margin through hover/breath; no orbital lines or UV sphere spin. No additive increase in overall interior/white luminosity.
+- Shader and view preserve exact locked V4 PNG SHA256 `773f67be7fea7fb8b3dd63b88f58dd55d01e82b0724ed3098db317a8d4f8d5b6`, independent microphone, voice/text FSM, soft breath, `?star=off` V4.2 comparison and other rollback modes.
+- Test commit `8ab8c6a62d46289f7477e51a079dffa7a2cb420b`, CI commit/final HEAD `357a9aaa27d4e23292234ce298926f1510a8d18f`. Actions `38529906932`: GLSL ES100 shader PASS, production site build PASS, **68/68 tests PASS** over 10 suites, including independent time samples for all compass sectors and safe maximum viewport extent.
+- Canonical source: [V5.1 eight-sector eruptive corona](docs/canon/MEDEUS_V5_1_EIGHT_SECTOR_ERUPTIVE_CORONA_2026-10-14.md). Preview: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/.
+- `SOURCE_QA=PASS`, `USER_VISUAL_SIGNOFF=PENDING`, `REAL_DESKTOP_MOBILE_GPU_QA=PENDING`, `STAGE_COMPLETE=FALSE`; Lovable requires final exact SHA mirror verification before labeling SYNC PASS; not publicly published.
