@@ -416,3 +416,12 @@ Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXAC
 - Locked master V4 PNG SHA256 `773f67be7fea7fb8b3dd63b88f58dd55d01e82b0724ed3098db317a8d4f8d5b6` unchanged, V3 backup unchanged; no microphone, 10-state FSM or responsive layout regression. No public deployment.
 - Complete canon: [V4.2 halo flares and intrinsic colors](docs/canon/MEDEUS_V4_2_HALO_SOLAR_BURSTS_COLOR_SEPARATION_2026-10-14.md). Preview https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/.
 - `SOURCE_QA=PASS`, `USER_VISUAL_SIGNOFF=PENDING`, `REAL_BROWSER_MOBILE_QA=PENDING`, `STAGE_COMPLETE=FALSE`. Lovable mirror verified independently before claiming sync.
+
+
+## 2026-10-14 — V5 living star: kinetic convection and erupting corona
+- Latest user explicitly rejects V4.2 as visually motionless: "ореол статичный! цвета тоже! ... живую звезду ... внутренние и внешние процессы", authorizes execution "сама". `RECALL_DISPOSITION=EXTEND` immutable V4 image with `SUPERSEDE` V4.2's weak decorative effects as default, but leave exact A/B fallback `?star=off`.
+- Website `MrPenser/medeus-master-asset`: shader `cc863927fc97d5cb85db79b3fdf99ee9767c6b6e` implements **moving original V4 source filaments** via time-varying bounded optical convection, independent thermal/convective/granulation cells, separately excited white/violet/lilac families and spatially evolving external corona with FOUR erupting directional prominence areas. Optical width increases from prior 0.087 to up to ~0.245 radius, frame/canvas `ORB_BOX=1.30`; no sphere rotation or ring. A/B switch via `uStar` /`?star=off` added with stage `4bdc18b52f7990a73fa04983916b9590bf29bf97`.
+- Updated numeric source-motion tests `c4511b081a992d7e0880c45e0877d3b8e036bd2c`; workflow `413b9efb2b3c4c93c91ce172f155289744676547`; HEAD `413b9efb2b3c4c93c91ce172f155289744676547`. Actions `38528498056`: production build PASS, orb/mic GLSL ES100 PASS, **67/67 unit tests PASS in 10 suites**.
+- Master V4 PNG SHA256 `773f67be7fea7fb8b3dd63b88f58dd55d01e82b0724ed3098db317a8d4f8d5b6` unmodified, V3 backup, 10 FSM, mic and voice/text, responsive layout intact. No public publishing.
+- Detailed canon: [V5 live star](docs/canon/MEDEUS_V5_LIVE_STELLAR_CONVECTION_CORONA_2026-10-14.md); preview https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/.
+- `SOURCE_QA=PASS`, `USER_VISUAL_SIGNOFF=PENDING`, `REAL_DESKTOP_MOBILE_QA=PENDING`, `STAGE_COMPLETE=FALSE`. Lovable matching SHA must be independently verified; GitHub CI does not guarantee aesthetic realism.
