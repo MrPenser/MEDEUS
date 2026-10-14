@@ -434,3 +434,12 @@ Read in order: [PRODUCT CANON](docs/canon/MEDEUS_CANONICAL_SPEC_V1.md) → [EXAC
 - Test commit `8ab8c6a62d46289f7477e51a079dffa7a2cb420b`, CI commit/final HEAD `357a9aaa27d4e23292234ce298926f1510a8d18f`. Actions `38529906932`: GLSL ES100 shader PASS, production site build PASS, **68/68 tests PASS** over 10 suites, including independent time samples for all compass sectors and safe maximum viewport extent.
 - Canonical source: [V5.1 eight-sector eruptive corona](docs/canon/MEDEUS_V5_1_EIGHT_SECTOR_ERUPTIVE_CORONA_2026-10-14.md). Preview: https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/.
 - `SOURCE_QA=PASS`, `USER_VISUAL_SIGNOFF=PENDING`, `REAL_DESKTOP_MOBILE_GPU_QA=PENDING`, `STAGE_COMPLETE=FALSE`; Lovable requires final exact SHA mirror verification before labeling SYNC PASS; not publicly published.
+
+
+## 2026-10-14 — V5.2 stronger localized mouse hover
+- User asked explicitly for stronger cursor hover response on approved V5.1 ("сделай отклик на наведение курсора сильнее") and authorized direct GitHub changes ("разрешаю"). `EXTEND` V5.1 orb hover only; preserve original approved V4 image, all 10 FSM, mic hover/click, and no global sphere whiteout or new orbit.
+- Website `MrPenser/medeus-master-asset` source commit `8b572cc734cd9467d24f30031bbe8dcbc3d50aa9`: V5-only local surface tug .165→.235, hover edge bulge .050→.075, water refraction lens .042→.064; localized lilac emission signal increases over 3x while spatially confined; adjacent corona sector brightens through angular falloff, **not** whole corona. The preexisting one-way click pulse unchanged. Quad `ORB_BOX=1.46` prevents extra corona clipping under hover/breath.
+- `?star=off` retains exact prior V4.2 hover, classic/volume/breath fallbacks unchanged. V4 PNG SHA256 `773f67be7fea7fb8b3dd63b88f58dd55d01e82b0724ed3098db317a8d4f8d5b6` unmodified; mic not touched.
+- Test commit `23454ca7b4dbf6af72f2b46df03ed2b9d021c953`, CI commit and HEAD `503c4d6b61543c8149c36f15cd7974441506a158`. GitHub Actions `38614705807`: shader and site PASS, **69/69 tests PASS** over 10 suites. Lovable `ready` / `agentFinished=true` verified at exact SHA `503c4d6b...`, preview https://id-preview--76dd8168-469d-4edb-88f6-f313be1c1de8.lovable.app/.
+- Full canon: [V5.2 strong hover](docs/canon/MEDEUS_V5_2_STRONG_LOCAL_HOVER_2026-10-14.md).
+- `SOURCE_QA=PASS`, `LOVABLE_SYNC=PASS`, `USER_VISUAL_SIGNOFF=PENDING`, `MOBILE_REAL_BROWSER_QA=PENDING`, `STAGE_COMPLETE=FALSE`. No public production deployment.
